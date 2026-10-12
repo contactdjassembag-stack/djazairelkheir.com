@@ -1,0 +1,22 @@
+# Cloudflare Pages response headers — djazairelkheir.com waiting page.
+# Static page: no forms, no cookies, no analytics, no third-party requests (fonts are self-hosted).
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.ico
+  Content-Type: image/x-icon
+
+# Keep the pages.dev copies out of search results — djazairelkheir.com is the canonical host.
+# Official Cloudflare example: developers.cloudflare.com/pages/configuration/headers/
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

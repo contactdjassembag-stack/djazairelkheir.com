@@ -1,0 +1,7 @@
+# Djazair El Kheir — robots.txt (2026-10-12)
+# Waiting page: everything may be crawled. The pages.dev copy is kept out of the index by an
+# X-Robots-Tag header in _headers, not here (robots.txt cannot vary by host on Pages).
+User-agent: *
+Allow: /
+
+Sitemap: https://djazairelkheir.com/sitemap.xml
