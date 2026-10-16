@@ -13,6 +13,9 @@
 <meta name="color-scheme" content="only light">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://djazairelkheir.com/">
+<link rel="alternate" hreflang="ar" href="https://djazairelkheir.com/">
+<link rel="alternate" hreflang="fr" href="https://djazairelkheir.com/fr/">
+<link rel="alternate" hreflang="x-default" href="https://djazairelkheir.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_DZ">
 <meta property="og:locale:alternate" content="fr_FR">
@@ -74,6 +77,10 @@
   src: url("/fonts/amiri-ar-400.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
 @font-face { font-family: "Amiri"; font-style: normal; font-weight: 700; font-display: swap;
   src: url("/fonts/amiri-ar-700.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Amiri"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/fonts/amiri-lat-400.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
+@font-face { font-family: "Amiri"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("/fonts/amiri-lat-700.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
 @font-face { font-family: "Amiri"; font-style: italic; font-weight: 400; font-display: swap;
   src: url("/fonts/amiri-lat-400i.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
 @font-face { font-family: "IBM Plex Sans Arabic"; font-style: normal; font-weight: 400; font-display: swap;
@@ -162,6 +169,13 @@ section[id] { scroll-margin-top: 84px; }
 .nav { display: flex; gap: 6px; }
 .nav a { padding: 8px 12px; border-radius: 999px; font-weight: 600; font-size: 15px; color: var(--muted); text-decoration: none; transition: color .2s, background .2s; }
 .nav a:hover { color: var(--ink); background: var(--green-mist); }
+.lang {
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--hairline);
+  font-weight: 600; font-size: 14px; color: var(--green-deep); text-decoration: none; white-space: nowrap;
+  transition: background .2s, border-color .2s;
+}
+.lang:hover { background: var(--green-mist); border-color: rgba(92, 160, 27, .4); }
+.lang[lang="ar"] { font-family: var(--serif); font-size: 17px; padding-block: 4px; }
 
 /* ---------- hero ---------- */
 .hero {
@@ -218,10 +232,29 @@ section[id] { scroll-margin-top: 84px; }
 .verse { font: 400 clamp(19px, 2.1vw, 25px)/1.6 var(--serif); color: var(--green-deep); }
 .verse cite { font: normal 600 .55em var(--sans); color: var(--muted); margin-inline-start: .5em; white-space: nowrap; }
 .headline { font: 700 clamp(34px, 4.6vw, 60px)/1.3 var(--serif); text-wrap: balance; }
-.headline em { font-style: normal; color: var(--red); }
+.headline em { font-style: normal; color: var(--red); white-space: nowrap; }
 .lede { font-size: clamp(16px, 1.45vw, 19px); line-height: 1.9; color: var(--muted); max-width: 36ch; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
 .fr { font: italic 400 clamp(15px, 1.3vw, 17px)/1.6 var(--serif); color: var(--muted); text-align: right; }
+.alt-ar { font: 700 clamp(17px, 1.6vw, 21px)/1.6 var(--serif); color: var(--green-deep); }
+
+/* ---------- French page (dir="ltr"): mirrored backdrop, translation under the verse, Latin typography ---------- */
+[dir="ltr"] .lattice {
+  -webkit-mask-image: radial-gradient(ellipse 48% 70% at 28% 46%, transparent 30%, #000 90%);
+          mask-image: radial-gradient(ellipse 48% 70% at 28% 46%, transparent 30%, #000 90%);
+}
+[dir="ltr"] .verse { display: grid; gap: 2px; justify-items: start; }
+[dir="ltr"] .verse .ayah { font-size: 1em; color: var(--green-deep); }
+[dir="ltr"] .verse .meaning { font: italic 400 .78em/1.5 var(--serif); color: var(--ink); }
+[dir="ltr"] .verse cite { display: block; margin: 4px 0 0; font-size: .66em; font-style: normal; }
+[dir="ltr"] .headline { font-size: clamp(32px, 4.2vw, 56px); line-height: 1.15; letter-spacing: -.01em; }
+[dir="ltr"] .section h2 { line-height: 1.2; }
+[dir="ltr"] .brand-name { font-size: 22px; letter-spacing: .01em; }
+[dir="ltr"] .kicker { letter-spacing: .08em; text-transform: uppercase; font-size: 12.5px; }
+[dir="ltr"] .goal h3 { font-size: 20px; line-height: 1.3; }
+[dir="ltr"] .goal p, [dir="ltr"] .prose { line-height: 1.75; }
+[dir="ltr"] .values { font-size: 21px; }
+[dir="ltr"] .foot-brand strong { font-size: 17px; }
 
 /* ---------- sections ---------- */
 .section { padding-block: clamp(64px, 9vw, 120px); }
@@ -357,6 +390,8 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
   .lede { margin-inline: auto; }
   .actions { justify-content: center; }
   .fr { text-align: center; }
+  [dir="ltr"] .verse { justify-items: center; }
+  [dir="ltr"] .lattice { -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); }
   .lattice { -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .goal-grid { grid-template-columns: 1fr; }
@@ -371,7 +406,10 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
   .brand-name { font-size: 20px; }
   .nav { order: 3; width: 100%; overflow-x: auto; scrollbar-width: none; padding-block: 6px 8px; margin-inline: -6px; }
   .nav::-webkit-scrollbar { display: none; }
-  .nav a { flex: none; font-size: 14px; padding: 6px 10px; }
+  .nav a { flex: none; font-size: 14px; padding: 6px 8px; }
+  .lang { padding: 5px 10px; font-size: 13px; }
+  .bar .btn-small span { display: none; }
+  .bar .btn-small { padding: 9px 11px; }
   section[id] { scroll-margin-top: 112px; }
   .goal { grid-template-columns: 46px minmax(0, 1fr); padding: 18px; gap: 4px 14px; }
   .goal-icon { width: 46px; height: 46px; border-radius: 14px; }
@@ -400,7 +438,8 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
       <a href="#volunteer">تطوّع معنا</a>
       <a href="#contact">تواصل</a>
     </nav>
-    <a class="btn btn-small" href="mailto:contact@djazairelkheir.com"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg><span>راسلنا</span></a>
+    <a class="lang" href="/fr/" hreflang="fr" lang="fr">Français</a>
+    <a class="btn btn-small" href="mailto:contact@djazairelkheir.com" aria-label="راسلنا"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg><span>راسلنا</span></a>
   </div>
 </header>
 
