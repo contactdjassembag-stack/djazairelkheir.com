@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<!-- Hosted on GitHub Pages, which cannot send custom headers: the security policy travels in the page itself
-     (frame-ancestors is not allowed in a meta tag). Same policy as waiting/_headers. -->
+<!-- GitHub Pages cannot send custom headers: the security policy travels in the page (frame-ancestors is not
+     allowed in a meta tag). Same policy as site/_headers. No forms, no cookies, no analytics, no third party. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>جزائر الخير — Algeria Charity · قريباً</title>
-<meta name="description" content="جزائر الخير، جمعية خيرية وطنية. موقعنا الرسمي قيد الإنشاء — نلقاكم قريباً بإذن الله. Djazair El Kheir (Algeria Charity) : notre site officiel arrive bientôt.">
+<title>جزائر الخير — جمعية خيرية وطنية · Algeria Charity</title>
+<meta name="description" content="جمعية جزائر الخير جمعية خيرية وطنية تقوم بالأعمال الخيرية والاجتماعية والإنسانية لصالح الفئات المحتاجة، وتسهم في دعم جهود الدولة في محاربة الفقر والأمية والأمراض المزمنة. Djazair El Kheir — association caritative nationale.">
 <meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="only light">
 <meta name="robots" content="index, follow">
@@ -18,16 +18,16 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:site_name" content="جزائر الخير — Algeria Charity">
 <meta property="og:title" content="جزائر الخير — معاً، نصنع الخير في كل ربوع الجزائر">
-<meta property="og:description" content="موقعنا الرسمي قيد الإنشاء — نلقاكم قريباً بإذن الله. Notre site officiel arrive bientôt.">
+<meta property="og:description" content="جمعية خيرية وطنية تعمل لصالح الفئات المحتاجة، بروح التضامن والتكافل والمواطنة.">
 <meta property="og:url" content="https://djazairelkheir.com/">
-<meta property="og:image" content="https://djazairelkheir.com/og.png?v=20261012c">
+<meta property="og:image" content="https://djazairelkheir.com/og.png?v=20261016">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="جزائر الخير — Algeria Charity">
 <meta name="twitter:card" content="summary_large_image">
-<!-- Structured data: the charity as an NGO + the site name. Add "sameAs" (Facebook, Instagram…) once the official
-     page URLs are confirmed; add address / foundingDate only from the association's registration documents. -->
+<!-- Structured data. Add "sameAs" (official social pages) and address / foundingDate only from the association's
+     own documents. The objectives below are quoted from the text supplied by the founder (16/10/2026). -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,16 +36,18 @@
       "@type": "NGO",
       "@id": "https://djazairelkheir.com/#organization",
       "name": "جزائر الخير",
-      "alternateName": ["Djazair El Kheir", "Algeria Charity"],
+      "alternateName": ["جمعية جزائر الخير", "Djazair El Kheir", "Algeria Charity"],
       "url": "https://djazairelkheir.com/",
       "email": "contact@djazairelkheir.com",
+      "slogan": "معاً، نصنع الخير في كل ربوع الجزائر",
+      "areaServed": { "@type": "Country", "name": "Algeria" },
       "logo": {
         "@type": "ImageObject",
         "url": "https://djazairelkheir.com/logo.png",
         "width": 512,
         "height": 512
       },
-      "description": "جمعية خيرية وطنية — Association caritative nationale algérienne."
+      "description": "جمعية خيرية وطنية تقوم بالأعمال الخيرية والاجتماعية والإنسانية ذات الطابع التضامني والتنموي لصالح الفئات المحتاجة."
     },
     {
       "@type": "WebSite",
@@ -53,21 +55,21 @@
       "url": "https://djazairelkheir.com/",
       "name": "جزائر الخير",
       "alternateName": ["Djazair El Kheir", "djazairelkheir.com"],
-      "inLanguage": ["ar", "fr"],
+      "inLanguage": "ar",
       "publisher": { "@id": "https://djazairelkheir.com/#organization" }
     }
   ]
 }
 </script>
 <!-- PNG first for Google Search (its favicon formats exclude SVG); browsers that support SVG use the next line -->
-<link rel="icon" href="/favicon-192.png?v=20261012c" type="image/png" sizes="192x192">
-<link rel="icon" href="/favicon.svg?v=20261012c" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261012c">
+<link rel="icon" href="/favicon-192.png?v=20261016" type="image/png" sizes="192x192">
+<link rel="icon" href="/favicon.svg?v=20261016" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261016">
 <link rel="preload" href="/fonts/amiri-ar-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/plex-ar-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-/* Self-hosted fonts (SIL OFL 1.1 — licences in /fonts). Arabic files are subset to this page's text by
-   _build/build.py: edit the text in the template, then rebuild. No third-party requests from this page. */
+/* Self-hosted fonts (SIL OFL 1.1 — licences in /fonts). Arabic files are subset to the pages' text by
+   _build/build.py: edit the text in the template, then rebuild. Icons: Lucide (ISC), inlined at build time. */
 @font-face { font-family: "Amiri"; font-style: normal; font-weight: 400; font-display: swap;
   src: url("/fonts/amiri-ar-400.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
 @font-face { font-family: "Amiri"; font-style: normal; font-weight: 700; font-display: swap;
@@ -86,99 +88,113 @@
 /* Djazair El Kheir identity — colours sampled from the vector logo (PSD/Djazair-El-Kheir_Logo_Vector.svg). */
 :root {
   color-scheme: only light;
-  --red: #E30613;            /* logo red: crescent, star, diacritics — 4.9:1 on white */
-  --green: #5CA01B;          /* logo green: arch foot, calligraphy — graphics and large type only (3.2:1) */
+  --red: #E30613;            /* logo red — 4.9:1 on white */
+  --green: #5CA01B;          /* logo green — graphics and large type only (3.2:1) */
   --lime: #BDD913;           /* top of the arch gradient — graphics only */
   --green-deep: #3D7413;     /* green for text: 5.7:1 on white */
+  --green-night: #2B520D;    /* hover / band shade: white on it 8.6:1 */
+  --green-mist: #F1F7E6;     /* tinted surfaces */
 
   --ink: #1C2418;
   --muted: rgba(28, 36, 24, .74);
   --hairline: rgba(28, 36, 24, .12);
-
   --paper: #ffffff;
   --paper-mid: #FBFCF7;
   --paper-low: #EFF6E0;
 
   --serif: "Amiri", "Traditional Arabic", "Times New Roman", serif;
   --sans: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  --radius: 20px;
+  --shadow: 0 1px 2px rgba(28, 36, 24, .05), 0 12px 32px -18px rgba(28, 36, 24, .28);
+  --lattice: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%235CA01B' stroke-width='.9'%3E%3Cpath d='M30 30h36v36H30z'/%3E%3Cpath d='M48 22.5 73.5 48 48 73.5 22.5 48z'/%3E%3Cpath d='M48 0v22.5M48 73.5V96M0 48h22.5M73.5 48H96M0 0l30 30M96 0 66 30M96 96 66 66M0 96l30-30'/%3E%3C/g%3E%3C/svg%3E");
+  --lattice-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='.9'%3E%3Cpath d='M30 30h36v36H30z'/%3E%3Cpath d='M48 22.5 73.5 48 48 73.5 22.5 48z'/%3E%3Cpath d='M48 0v22.5M48 73.5V96M0 48h22.5M73.5 48H96M0 0l30 30M96 0 66 30M96 96 66 66M0 96l30-30'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  min-height: 100svh;
-  display: flex; flex-direction: column;
   color: var(--ink);
-  background: linear-gradient(to bottom, var(--paper) 0%, var(--paper-mid) 48%, var(--paper-low) 100%);
+  background: var(--paper);
   font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+img, svg { display: block; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+section[id] { scroll-margin-top: 84px; }
+.wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; inset-inline-start: 12px; top: -60px; z-index: 50; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 3px; border-radius: 6px; }
 
-/* ---------- backdrop: geometric lattice, horizon, rising lights ---------- */
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 24px; border-radius: 999px;
+  background: var(--green-deep); color: #fff; border: 1.5px solid var(--green-deep);
+  font: 600 16px/1.2 var(--sans); text-decoration: none; white-space: nowrap;
+  transition: background .2s, color .2s, transform .2s, box-shadow .2s;
+}
+.btn:hover { background: var(--green-night); border-color: var(--green-night); transform: translateY(-1px); box-shadow: 0 10px 22px -12px rgba(43, 82, 13, .7); }
+.btn svg { width: 19px; height: 19px; flex: none; }
+.btn-ghost { background: transparent; color: var(--green-deep); }
+.btn-ghost:hover { background: var(--green-mist); color: var(--green-night); box-shadow: none; }
+.btn-small { padding: 9px 16px; font-size: 14px; }
+.btn-light { background: #fff; color: var(--green-night); border-color: #fff; }
+.btn-light:hover { background: var(--green-mist); border-color: var(--green-mist); color: var(--green-night); }
+
+/* ---------- header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(255, 255, 255, .88);
+  backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--hairline);
+}
+.bar { display: flex; align-items: center; gap: 24px; min-height: 68px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-inline-end: auto; }
+.brand img { width: 40px; height: 40px; }
+.brand-name { font: 700 23px/1.1 var(--serif); }
+.brand-sub { display: block; font: 600 9.5px/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-top: 4px; }
+.nav { display: flex; gap: 6px; }
+.nav a { padding: 8px 12px; border-radius: 999px; font-weight: 600; font-size: 15px; color: var(--muted); text-decoration: none; transition: color .2s, background .2s; }
+.nav a:hover { color: var(--ink); background: var(--green-mist); }
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: linear-gradient(to bottom, var(--paper) 0%, var(--paper-mid) 55%, var(--paper-low) 100%);
+  padding-block: clamp(36px, 7vh, 88px) clamp(56px, 9vh, 110px);
+}
 .lattice {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  /* 8-point star lattice (khatam), one 96px tile */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%235CA01B' stroke-width='.9'%3E%3Cpath d='M30 30h36v36H30z'/%3E%3Cpath d='M48 22.5 73.5 48 48 73.5 22.5 48z'/%3E%3Cpath d='M48 0v22.5M48 73.5V96M0 48h22.5M73.5 48H96M0 0l30 30M96 0 66 30M96 96 66 66M0 96l30-30'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 96px 96px;
-  background-position: 50% 0;
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: var(--lattice); background-size: 96px 96px; background-position: 50% 0;
   opacity: .13;
-  -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 42%, transparent 38%, #000 92%);
-          mask-image: radial-gradient(ellipse 62% 58% at 50% 42%, transparent 38%, #000 92%);
+  -webkit-mask-image: radial-gradient(ellipse 48% 70% at 72% 46%, transparent 30%, #000 90%);
+          mask-image: radial-gradient(ellipse 48% 70% at 72% 46%, transparent 30%, #000 90%);
 }
 .horizon {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background:
     radial-gradient(58% 30% at 50% 112%, rgba(92, 160, 27, .24) 0%, transparent 70%),
     radial-gradient(36% 22% at 50% 106%, rgba(189, 217, 19, .20) 0%, transparent 70%),
     radial-gradient(30% 22% at 8% 104%, rgba(227, 6, 19, .06) 0%, transparent 70%),
     radial-gradient(30% 22% at 92% 104%, rgba(227, 6, 19, .06) 0%, transparent 70%);
 }
-.horizon svg { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 16vh; }
-
-/* small lights rising from the horizon — "seeds of good" */
-.motes { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.horizon svg { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 90px; }
+.motes { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 .motes span {
   position: absolute; bottom: -14px; left: var(--x);
   width: var(--s); height: var(--s); border-radius: 50%;
-  background: var(--c);
-  box-shadow: 0 0 calc(var(--s) * 2) var(--c);
-  opacity: 0;
-  animation: mote var(--d) linear var(--delay) infinite;
+  background: var(--c); box-shadow: 0 0 calc(var(--s) * 2) var(--c);
+  opacity: 0; animation: mote var(--d) linear var(--delay) infinite;
 }
-
-/* ---------- layout ---------- */
-main {
-  position: relative; z-index: 2;
-  flex: 1 0 auto;
-  display: grid; place-items: center;
-  padding: clamp(22px, 4.5vh, 56px) 16px clamp(12px, 2.5vh, 32px);
-}
-/* Portrait / phones: one centred column, the pill above the logo.
-   Landscape screens: logo on the right (start), words on the left — see the media query below. */
-.stack { width: min(1120px, 100%); display: grid; justify-items: center; text-align: center; gap: clamp(10px, 2vh, 20px); }
-.copy { display: contents; }
-.copy > .eyebrow { order: -1; }
-
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-weight: 600; font-size: 14px; line-height: 1;
-  color: var(--muted);
-  padding: 9px 16px; border: 1px solid var(--hairline); border-radius: 999px;
-  background: rgba(255, 255, 255, .78);
-  backdrop-filter: blur(6px);
-}
-.eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); box-shadow: 0 0 10px var(--red); animation: blink 1.8s ease-in-out infinite; }
-.eyebrow .sep { width: 1px; height: 12px; background: var(--hairline); }
-.eyebrow [lang="fr"] { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; }
-
-/* ---------- logo (inline vector paths from the official file: no font, no request) ---------- */
-.logo {
-  width: clamp(170px, calc((100svh - 440px) * .83), 300px);
-  max-width: 64vw;
-  line-height: 0;
-}
-.logo svg { width: 100%; height: auto; display: block; overflow: visible; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: clamp(40px, 6vw, 100px); align-items: center; }
+.logo { line-height: 0; width: 100%; max-width: 400px; justify-self: center; }
+.logo svg { width: 100%; height: auto; overflow: visible; }
 .logo svg g { transform-box: fill-box; }
 .lg-base     { transform-origin: 50% 50%;  animation: base-in 1s cubic-bezier(.2,.7,.2,1) both .05s; }
 .lg-arch     { transform-origin: 50% 100%; animation: arch-in 1.1s cubic-bezier(.2,.7,.2,1) both .15s; }
@@ -192,60 +208,128 @@ main {
 .lg-glow     { animation: fade-in 1.4s ease-out both 1.2s; }
 .lg-glow circle { transform-box: fill-box; transform-origin: 50% 50%; animation: breathe 7s ease-in-out 2.6s infinite; }
 
-/* ---------- words ---------- */
-.verse {
-  font-family: var(--serif); font-weight: 400;
-  font-size: clamp(19px, 2.3vw, 25px); line-height: 1.6;
-  color: var(--green-deep);
-}
-.verse cite { font-family: var(--sans); font-style: normal; font-size: .58em; color: var(--muted); margin-inline-start: .5em; white-space: nowrap; }
-
-.headline {
-  font-family: var(--serif); font-weight: 700;
-  font-size: clamp(27px, 4.1vw, 48px); line-height: 1.35;
-  max-width: 22ch;
-  text-wrap: balance;
-}
+.hero-copy { display: grid; justify-items: start; gap: clamp(14px, 2.2vh, 22px); }
+.hero-copy > * { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.hero-copy > :nth-child(1) { animation-delay: .9s; }
+.hero-copy > :nth-child(2) { animation-delay: 1.05s; }
+.hero-copy > :nth-child(3) { animation-delay: 1.2s; }
+.hero-copy > :nth-child(4) { animation-delay: 1.35s; }
+.hero-copy > :nth-child(5) { animation-delay: 1.5s; }
+.verse { font: 400 clamp(19px, 2.1vw, 25px)/1.6 var(--serif); color: var(--green-deep); }
+.verse cite { font: normal 600 .55em var(--sans); color: var(--muted); margin-inline-start: .5em; white-space: nowrap; }
+.headline { font: 700 clamp(34px, 4.6vw, 60px)/1.3 var(--serif); text-wrap: balance; }
 .headline em { font-style: normal; color: var(--red); }
+.lede { font-size: clamp(16px, 1.45vw, 19px); line-height: 1.9; color: var(--muted); max-width: 36ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.fr { font: italic 400 clamp(15px, 1.3vw, 17px)/1.6 var(--serif); color: var(--muted); text-align: right; }
 
-.lede { font-size: clamp(15px, 1.5vw, 18px); line-height: 1.75; color: var(--muted); max-width: 40ch; text-wrap: balance; }
-
-.ornament { display: flex; align-items: center; gap: 12px; width: min(220px, 60%); }
-.ornament .line { flex: 1; height: 1px; background: linear-gradient(to var(--to, left), transparent, rgba(92, 160, 27, .55)); }
-.ornament .line:last-child { --to: right; }
-.ornament svg { width: 15px; height: 15px; flex: none; }
-
-.fr {
-  font-family: var(--serif); font-style: italic; font-weight: 400;
-  font-size: clamp(15px, 1.45vw, 18px); line-height: 1.6;
-  color: var(--muted);
-  max-width: 46ch; text-wrap: balance;
+/* ---------- sections ---------- */
+.section { padding-block: clamp(64px, 9vw, 120px); }
+.kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font: 600 14px/1 var(--sans); color: var(--green-deep); letter-spacing: .02em;
 }
+.kicker::before { content: ""; width: 9px; height: 9px; background: var(--red); transform: rotate(45deg); border-radius: 1px; }
+.section h2 { font: 700 clamp(29px, 3.5vw, 44px)/1.35 var(--serif); margin: 14px 0 18px; text-wrap: balance; }
+.prose { font-size: clamp(16px, 1.3vw, 18px); line-height: 2; color: var(--muted); max-width: 62ch; }
 
-footer {
-  position: relative; z-index: 2;
-  display: flex; justify-content: space-between; align-items: center; gap: 12px;
-  padding: 16px clamp(16px, 4vw, 40px) calc(16px + env(safe-area-inset-bottom));
-  font-size: 13px; color: var(--muted);
+/* about */
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.card {
+  background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius);
+  padding: clamp(22px, 3vw, 34px); box-shadow: var(--shadow);
 }
-footer .mail {
-  font-weight: 600; letter-spacing: .02em; color: var(--green-deep);
-  text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(61, 116, 19, .35);
+.card h3 { font: 700 22px/1.4 var(--serif); margin-bottom: 6px; }
+.card .hint { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li {
+  padding: 8px 16px; border-radius: 999px;
+  background: var(--green-mist); color: var(--green-night);
+  font-weight: 600; font-size: 15px; line-height: 1.5;
 }
-footer .mail:hover { text-decoration-color: currentColor; }
-footer .mail:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; border-radius: 4px; }
+.values { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 24px; font: 700 20px/1.4 var(--serif); color: var(--green-deep); }
+.values li + li::before { content: "·"; color: var(--red); margin-inline-end: 18px; }
+
+/* goals */
+.goals { background: linear-gradient(to bottom, var(--paper-mid), var(--green-mist)); position: relative; }
+.goals-head { display: grid; gap: 4px; margin-bottom: clamp(28px, 4vw, 44px); }
+.goals-head .prose { max-width: 56ch; }
+.goal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; counter-reset: goal; }
+.goal {
+  display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 6px 18px; align-items: start;
+  background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius);
+  padding: 22px 22px 24px; box-shadow: var(--shadow);
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.goal:hover { transform: translateY(-3px); border-color: rgba(92, 160, 27, .4); box-shadow: 0 1px 2px rgba(28, 36, 24, .05), 0 22px 40px -22px rgba(43, 82, 13, .45); }
+.goal-icon {
+  grid-row: span 2; width: 54px; height: 54px; border-radius: 16px;
+  display: grid; place-items: center;
+  background: var(--green-mist); color: var(--green-deep);
+}
+.goal-icon svg { width: 26px; height: 26px; }
+.goal-head { display: flex; align-items: baseline; gap: 12px; }
+.goal h3 { font: 700 21px/1.45 var(--serif); }
+.goal-no { margin-inline-start: auto; font: 600 13px/1 var(--sans); color: var(--red); letter-spacing: .06em; }
+.goal p { font-size: 15.5px; line-height: 1.95; color: var(--muted); }
+
+/* volunteer band */
+.band {
+  position: relative; overflow: hidden; isolation: isolate;
+  border-radius: 28px; color: #fff;
+  background:
+    radial-gradient(60% 90% at 10% 0%, rgba(189, 217, 19, .22), transparent 60%),
+    linear-gradient(135deg, var(--green-night) 0%, var(--green-deep) 60%, #4A8618 100%);
+  padding: clamp(30px, 5vw, 60px);
+  display: grid; grid-template-columns: minmax(0, 1.4fr) auto; gap: 28px 48px; align-items: center;
+  box-shadow: 0 30px 60px -36px rgba(43, 82, 13, .8);
+}
+.band::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: var(--lattice-light); background-size: 96px 96px; opacity: .08; }
+.band .kicker { color: #E7F3C4; }
+.band .kicker::before { background: #fff; }
+.band h2 { color: #fff; }
+.band .prose { color: rgba(255, 255, 255, .9); }
+.band-cta { display: grid; justify-items: center; gap: 10px; text-align: center; }
+.band-cta small { font-size: 13.5px; color: rgba(255, 255, 255, .85); max-width: 24ch; line-height: 1.7; }
+
+#volunteer { padding-bottom: 0; }
+
+/* contact */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
+.mail-card {
+  display: flex; align-items: center; gap: 18px; text-decoration: none;
+  background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 22px 26px; transition: transform .25s, border-color .25s;
+}
+.mail-card:hover { transform: translateY(-2px); border-color: rgba(92, 160, 27, .45); }
+.mail-card .ic { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--green-deep); color: #fff; flex: none; }
+.mail-card .ic svg { width: 26px; height: 26px; }
+.mail-card span { display: block; }
+.mail-card .label { font-size: 14px; color: var(--muted); }
+.mail-card .addr { font: 600 clamp(16px, 1.7vw, 21px)/1.4 var(--sans); color: var(--green-deep); overflow-wrap: anywhere; }
+
+/* footer */
+.site-footer { border-top: 1px solid var(--hairline); background: var(--paper-mid); padding-block: 28px calc(28px + env(safe-area-inset-bottom)); font-size: 14px; color: var(--muted); }
+.foot { display: grid; grid-template-columns: auto 1fr auto; gap: 16px 32px; align-items: center; }
+.foot-brand { display: flex; align-items: center; gap: 10px; color: var(--ink); }
+.foot-brand img { width: 34px; height: 34px; }
+.foot-brand strong { display: block; font: 700 18px/1.2 var(--serif); }
+.foot-brand span { font: 600 9px/1 var(--sans); letter-spacing: .22em; color: var(--red); }
+.privacy { text-align: center; line-height: 1.7; }
+.foot-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+.foot-meta a { color: var(--green-deep); font-weight: 600; text-decoration-color: rgba(61, 116, 19, .35); text-underline-offset: 4px; }
 .motion-toggle {
-  font: inherit; color: inherit;
-  background: none; border: 0; padding: 6px 4px; cursor: pointer;
+  font: inherit; color: inherit; background: none; border: 0; padding: 4px; cursor: pointer;
   text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(28, 36, 24, .3);
 }
-.motion-toggle:hover { color: var(--ink); }
-.motion-toggle:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; border-radius: 4px; }
-/* WCAG 2.2.2: one click pauses every moving part. */
-html.paused *, html.paused *::before, html.paused *::after { animation-play-state: paused !important; }
+
+/* ---------- reveal on scroll ----------
+   The script marks only what starts below the first screen as .pending; anything it never reaches stays visible. */
+.reveal { transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+.reveal.pending { opacity: 0; transform: translateY(18px); }
+.reveal.pending.in { opacity: 1; transform: none; }
 
 /* ---------- motion ---------- */
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @keyframes fade-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
@@ -260,62 +344,77 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
   0%   { opacity: 0; transform: translate3d(0, 0, 0); }
   12%  { opacity: var(--o); }
   78%  { opacity: var(--o); }
-  100% { opacity: 0; transform: translate3d(var(--sway), -78vh, 0); }
+  100% { opacity: 0; transform: translate3d(var(--sway), -70vh, 0); }
 }
-.copy > * { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
-.copy > .eyebrow  { animation-delay: .05s; }
-.copy > .verse    { animation-delay: 1.35s; }
-.copy > .headline { animation-delay: 1.55s; }
-.copy > .lede     { animation-delay: 1.7s; }
-.copy > .ornament { animation-delay: 1.8s; }
-.copy > .fr       { animation-delay: 1.9s; }
+/* WCAG 2.2.2: one click pauses every moving part. */
+html.paused *, html.paused *::before, html.paused *::after { animation-play-state: paused !important; }
 
-/* ---------- landscape screens: two columns ---------- */
-@media (min-width: 900px) and (min-aspect-ratio: 5/4) {
-  .stack {
-    grid-template-columns: auto minmax(0, 560px);
-    justify-content: center; align-items: center;
-    column-gap: clamp(48px, 6vw, 110px);
-    text-align: start;
-  }
-  .logo { width: min(calc(min(66svh, 560px) * .83), 34vw); max-width: none; }
-  .copy { display: grid; justify-items: start; gap: clamp(12px, 2.2vh, 22px); }
-  .copy > .eyebrow { order: 0; }
-  .headline { font-size: clamp(34px, 3.4vw, 54px); max-width: none; }
-  .lede { max-width: 34ch; }
-  .ornament { width: 200px; }
-  .ornament .line:first-child { display: none; }
-  .fr { text-align: right; max-width: 40ch; }
-  .lattice {
-    -webkit-mask-image: radial-gradient(ellipse 48% 70% at 70% 46%, transparent 30%, #000 90%);
-            mask-image: radial-gradient(ellipse 48% 70% at 70% 46%, transparent 30%, #000 90%);
-  }
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .logo { max-width: min(250px, 62vw); }
+  .hero-copy { justify-items: center; }
+  .lede { margin-inline: auto; }
+  .actions { justify-content: center; }
+  .fr { text-align: center; }
+  .lattice { -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .goal-grid { grid-template-columns: 1fr; }
+  .band { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .band .prose { margin-inline: auto; }
+  .foot { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .foot-meta { justify-content: center; }
 }
-
-/* ---------- small screens ---------- */
-@media (max-width: 640px) {
-  .lattice { background-size: 72px 72px; opacity: .11; }
-  footer { flex-direction: column; justify-content: center; gap: 4px; text-align: center; }
-  footer .motion-toggle { order: 3; }
-  .motes span:nth-child(n+11) { display: none; }
+@media (max-width: 760px) {
+  .bar { flex-wrap: wrap; gap: 0 12px; min-height: 0; padding-top: 10px; }
+  .brand img { width: 34px; height: 34px; }
+  .brand-name { font-size: 20px; }
+  .nav { order: 3; width: 100%; overflow-x: auto; scrollbar-width: none; padding-block: 6px 8px; margin-inline: -6px; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { flex: none; font-size: 14px; padding: 6px 10px; }
+  section[id] { scroll-margin-top: 112px; }
+  .goal { grid-template-columns: 46px minmax(0, 1fr); padding: 18px; gap: 4px 14px; }
+  .goal-icon { width: 46px; height: 46px; border-radius: 14px; }
+  .motes span:nth-child(n+9) { display: none; }
 }
-
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal.pending { opacity: 1; transform: none; }
   .motes, .motion-toggle { display: none; }
 }
 </style>
 </head>
 <body>
-  <div class="lattice" aria-hidden="true"></div>
-  <div class="horizon" aria-hidden="true">
-    <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-      <defs><linearGradient id="hz" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5CA01B" stop-opacity="0"/><stop offset=".5" stop-color="#5CA01B" stop-opacity=".45"/><stop offset="1" stop-color="#5CA01B" stop-opacity="0"/></linearGradient></defs>
-      <path d="M-40 100 Q 500 8 1040 100 Z" fill="#5CA01B" fill-opacity=".05"/>
-      <path d="M-40 100 Q 500 8 1040 100" fill="none" stroke="url(#hz)" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
-    </svg>
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <img src="/favicon.svg?v=20261016" alt="" width="40" height="40">
+      <span><span class="brand-name">جزائر الخير</span><span class="brand-sub" lang="en" dir="ltr">Algeria Charity</span></span>
+    </a>
+    <nav class="nav" aria-label="أقسام الصفحة">
+      <a href="#about">من نحن</a>
+      <a href="#goals">أهدافنا</a>
+      <a href="#volunteer">تطوّع معنا</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <a class="btn btn-small" href="mailto:contact@djazairelkheir.com"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg><span>راسلنا</span></a>
   </div>
-  <div class="motes" aria-hidden="true">
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="lattice" aria-hidden="true"></div>
+    <div class="horizon" aria-hidden="true">
+      <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <defs><linearGradient id="hz" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5CA01B" stop-opacity="0"/><stop offset=".5" stop-color="#5CA01B" stop-opacity=".45"/><stop offset="1" stop-color="#5CA01B" stop-opacity="0"/></linearGradient></defs>
+        <path d="M-40 100 Q 500 8 1040 100 Z" fill="#5CA01B" fill-opacity=".05"/>
+        <path d="M-40 100 Q 500 8 1040 100" fill="none" stroke="url(#hz)" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+      </svg>
+    </div>
+    <div class="motes" aria-hidden="true">
     <span style="--x:12.0%;--s:6.0px;--c:rgba(189,217,19,.95);--d:24.0s;--delay:-7.2s;--o:0.78;--sway:-39px"></span>
     <span style="--x:17.8%;--s:4.5px;--c:rgba(92,160,27,.85);--d:17.1s;--delay:-6.8s;--o:0.51;--sway:10px"></span>
     <span style="--x:80.7%;--s:5.2px;--c:rgba(189,217,19,.95);--d:21.3s;--delay:-1.2s;--o:0.61;--sway:1px"></span>
@@ -332,10 +431,9 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
     <span style="--x:29.6%;--s:6.2px;--c:rgba(92,160,27,.85);--d:19.3s;--delay:-14.7s;--o:0.41;--sway:3px"></span>
     <span style="--x:37.6%;--s:4.0px;--c:rgba(189,217,19,.95);--d:17.5s;--delay:-13.9s;--o:0.57;--sway:-9px"></span>
     <span style="--x:46.9%;--s:4.7px;--c:rgba(227,6,19,.7);--d:22.8s;--delay:-7.0s;--o:0.69;--sway:43px"></span>
-  </div>
+    </div>
 
-  <main>
-    <div class="stack">
+    <div class="wrap hero-grid">
       <h1 class="logo">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="395 280 1200 1450" role="img" aria-labelledby="logo-title">
 <title id="logo-title">جزائر الخير — Algeria Charity</title>
@@ -352,43 +450,177 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
 <g class="lg-latin"><path fill="#E30613" fill-rule="evenodd" d="M1472.1 1708.9C1471.9 1708.1 1471.9 1706.8 1471.5 1706.1C1469.9 1703.9 1464.3 1706.6 1462.7 1701.5C1461.4 1697.3 1462.2 1688.8 1462.2 1684.1C1462.2 1672.5 1462 1660.9 1462.3 1649.3C1466.6 1649.2 1472.7 1648.3 1476.2 1651.4C1478.7 1653.6 1480.4 1661 1481.5 1661.6C1482.3 1662 1483.5 1661.7 1484.3 1661.8C1484.1 1655.2 1483.7 1648.5 1483.1 1641.9C1481.6 1642.8 1479.1 1644.5 1477.5 1644.8C1473.9 1645.6 1452.8 1645 1447.4 1645C1444.2 1645 1435.7 1645.6 1433.1 1644.8C1432.6 1644.6 1429 1642.5 1428.2 1642.1C1427.7 1648.7 1427.1 1655.4 1426.9 1662.1C1427.8 1661.9 1428.8 1662.1 1429.6 1661.8C1430.6 1661.3 1432.6 1653.7 1434.8 1651.6C1438.2 1648.4 1444.6 1649.2 1448.9 1649.3C1449.2 1661 1449 1672.7 1449 1684.4C1449 1688.6 1449.7 1698 1448.6 1701.5C1447 1706.6 1441.7 1703.9 1440.1 1706.2C1439.7 1706.8 1439.8 1708.1 1439.6 1708.9C1450.4 1709.1 1461.3 1709.3 1472.1 1708.9ZM479.3 1708.9C479.2 1708.1 479.3 1707 478.9 1706.2C478.1 1704.8 475.1 1704.8 473.8 1703.9C471.5 1702.3 470.3 1699.5 469.3 1697C462.1 1679.6 456.4 1661.6 449.7 1644C448.1 1644.4 446.5 1644.9 444.9 1645.3C437.4 1662.7 431.2 1680.6 423.7 1697.9C422.7 1700.3 421.5 1702.8 419.1 1704.2C417.8 1704.9 415 1704.8 414.1 1706.2C413.7 1706.9 413.8 1708.1 413.6 1708.9C421 1709.1 428.5 1709.1 436 1708.9C434.9 1703.4 435.4 1706.9 429 1703.4C429.4 1698.1 431.3 1693.1 433.3 1688.2C439.5 1688.2 445.6 1688.2 451.8 1688.2C453.9 1693 455.7 1698 456.9 1703.1C456.3 1703.5 455.8 1704.2 455.1 1704.6C451.4 1706.7 452.1 1703.9 451 1708.9C460.4 1709.2 469.9 1709.1 479.3 1708.9ZM640.8 1706.4C640.2 1702.5 639.3 1687.5 640.9 1684.4C641.9 1682.6 643.8 1682.9 645.2 1681.8C645.8 1681.3 646.5 1679.8 646.9 1679.3C640.2 1678.4 625 1678.4 618 1678.8C617 1678.9 615.9 1679.3 614.9 1679.5C615.2 1679.8 616.3 1681.4 616.9 1681.8C619.6 1683.3 624 1681.6 626.1 1684.8C627.6 1687 627.5 1701.4 626 1703.6C624.9 1705.2 622.9 1705.7 621.1 1705.9C599.1 1708.3 592.2 1680.4 598.1 1663.6C602.7 1650.4 617.6 1642.9 629.8 1651.7C633.9 1654.6 637 1662.9 637.5 1663.2C638.4 1663.5 639.7 1663 640.5 1662.9C640 1657.4 639.5 1652 638.9 1646.6C634.3 1645.7 629.7 1644.7 625.1 1644.2C613.2 1643.1 600.1 1645.9 591.1 1654.1C585.9 1658.9 582.8 1665.1 581.6 1671.9C578.5 1690.3 589 1704.4 606.7 1708.7C618.2 1711.6 629.5 1709 640.8 1706.4ZM959.3 1708.9C959.2 1708.1 959.3 1707 958.9 1706.2C958.1 1704.8 955.1 1704.8 953.8 1703.9C951.5 1702.3 950.3 1699.5 949.3 1697C942.1 1679.6 936.4 1661.6 929.7 1644C928.1 1644.4 926.5 1644.9 924.9 1645.3C917.4 1662.7 911.2 1680.6 903.7 1697.9C902.7 1700.3 901.5 1702.8 899.1 1704.2C897.8 1704.9 895 1704.8 894.1 1706.2C893.7 1706.9 893.8 1708.1 893.6 1708.9C901 1709.1 908.5 1709.1 916 1708.9C914.9 1703.4 915.4 1706.9 909 1703.4C909.4 1698.1 911.3 1693.1 913.3 1688.2C919.5 1688.2 925.6 1688.2 931.8 1688.2C933.9 1693 935.7 1698 936.9 1703.1C936.3 1703.5 935.8 1704.2 935.1 1704.6C931.4 1706.7 932.1 1703.9 931 1708.9C940.4 1709.2 949.9 1709.1 959.3 1708.9ZM1068.6 1692.2C1067.8 1691.8 1066.6 1690.8 1065.6 1691C1064.1 1691.4 1063 1694.4 1062.2 1695.6C1059.9 1698.8 1057.3 1701.9 1053.7 1703.6C1050.5 1705.3 1047.1 1705.6 1043.5 1705.2C1031.1 1703.7 1025.2 1693.2 1023.3 1681.8C1021.9 1673.1 1023.7 1662.3 1029.7 1655.5C1037.2 1646.9 1051.2 1645.4 1059 1654.5C1061.2 1657.1 1062.3 1660.2 1063.5 1663.3C1064.4 1663 1066.1 1663 1066.6 1662.1C1067.4 1660.8 1065.1 1648.9 1064.7 1646.7C1059.4 1645.4 1054 1644.2 1048.5 1644C1034.1 1643.4 1018.6 1649.2 1011.6 1662.5C1008.5 1668.4 1007.2 1675.9 1008.4 1682.5C1011.9 1702.6 1029 1710.7 1047.9 1709.8C1050.6 1709.7 1061.2 1708.6 1062.9 1707.2C1065 1705.4 1067.7 1695.2 1068.6 1692.2ZM1257.3 1708.9C1257.2 1708.1 1257.3 1707 1256.9 1706.2C1256.1 1704.8 1253.1 1704.8 1251.8 1703.9C1249.5 1702.3 1248.3 1699.5 1247.3 1697C1240.1 1679.6 1234.4 1661.6 1227.7 1644C1226.1 1644.4 1224.5 1644.9 1222.9 1645.3C1215.4 1662.7 1209.2 1680.6 1201.7 1697.9C1200.7 1700.3 1199.5 1702.8 1197.1 1704.2C1195.8 1704.9 1193 1704.8 1192.1 1706.2C1191.7 1706.9 1191.8 1708.1 1191.6 1708.9C1199 1709.1 1206.5 1709.1 1214 1708.9C1212.8 1703.4 1213.4 1706.9 1207 1703.4C1207.4 1698.1 1209.3 1693.1 1211.3 1688.2C1217.5 1688.2 1223.6 1688.2 1229.8 1688.2C1231.9 1693 1233.7 1698 1234.9 1703.1C1234.3 1703.5 1233.8 1704.2 1233.1 1704.6C1229.4 1706.7 1230.1 1703.9 1229 1708.9C1238.4 1709.2 1247.9 1709.1 1257.3 1708.9ZM722.6 1708.9C723.9 1703.6 724.9 1698.3 726 1692.9C725.1 1692.8 723.9 1692.2 723 1692.5C721.7 1693 718.4 1701.4 714.6 1703.5C712.5 1704.5 709.7 1704.8 707.4 1704.8C704.6 1704.8 699.1 1705.2 696.9 1703.4C696 1702.6 695.5 1701.5 695.2 1700.4C694.3 1696.2 695 1684 695.1 1679C698.9 1679 706.1 1678.1 709.3 1680C711.9 1681.5 711.6 1685.4 713.1 1686.2C713.9 1686.6 715 1686.5 715.9 1686.6C716.1 1679.9 716.1 1673.1 715.9 1666.4C715.1 1666.6 714 1666.4 713.2 1666.8C711.4 1667.7 711.8 1671.6 709.3 1673C705.9 1674.9 699 1674 695.1 1674C694.9 1666 694.8 1658 695.1 1650C695.9 1649.8 696.7 1649.4 697.5 1649.3C701.3 1648.7 710 1648.9 713.1 1651.4C715.1 1653 717 1659.6 718.2 1660C719 1660.3 720.1 1660 721 1660.1C720.9 1655 720.3 1650.1 720.1 1645.1C704.6 1644.8 689 1644.8 673.5 1645.1C673.8 1645.9 673.7 1647.2 674.2 1647.9C675.6 1649.9 679.8 1647.6 681.3 1652.1C682.6 1656.3 681.8 1663.6 681.8 1668.1C681.8 1674.2 682.5 1696.7 681.5 1701C679.9 1706.9 674.3 1703.8 672.8 1706.3C672.4 1707 672.6 1708.1 672.4 1708.9C689.1 1709.3 705.9 1709.4 722.6 1708.9ZM812.9 1709.9C812.8 1709.1 813.1 1708 812.8 1707.2C812.3 1706.2 810.7 1705.7 809.8 1705C808.1 1703.7 806.6 1702 805.2 1700.3C800 1693.5 795.7 1685.9 791.8 1678.4C795.3 1676.5 798.7 1674.6 801.1 1671.3C806.8 1663.5 803.7 1651.1 794.7 1647.3C786.6 1643.8 761.6 1644.9 751.8 1645.1C751.9 1645.8 751.9 1647.2 752.3 1647.9C753.7 1650 758 1647.7 759.5 1652.5C760.7 1656.4 760 1664.3 760 1668.6C760 1674.6 760.7 1696.5 759.7 1700.8C758.4 1706.5 753.4 1703.8 751.9 1706.2C751.4 1706.9 751.5 1708.1 751.3 1708.9C761.3 1709.2 771.2 1709 781.1 1709C781 1708.2 781.1 1707 780.8 1706.3C779.8 1704.3 775 1705.8 773.4 1702.3C772.1 1699.2 772.8 1685.9 772.9 1681.8C774.5 1681.9 776.1 1681.7 777.7 1682.5C781.7 1684.5 787.9 1698.7 791.4 1703.1C796.5 1709.5 805.3 1710.1 812.9 1709.9ZM867.2 1708.9C867.1 1708.2 867.1 1706.8 866.7 1706.1C865.5 1704.2 861 1706.2 859.5 1702C858.3 1698.6 859 1690.3 859 1686.3C859 1679.8 858.4 1658.3 859.2 1653.5C860.3 1647.2 865.8 1650.1 866.8 1647.7C867.1 1646.9 866.9 1645.8 867.1 1645C857.3 1645 847.5 1644.9 837.7 1645.1C837.8 1645.9 837.7 1647 838.1 1647.7C839.5 1650.4 844.3 1647 845.6 1653.7C846.4 1657.8 845.8 1680 845.8 1685.9C845.8 1690.6 846.6 1697.9 845.1 1702.2C843.8 1706 839.4 1704.1 838.1 1706.2C837.7 1706.9 837.8 1708.1 837.6 1708.9C847.5 1709.1 857.4 1709.1 867.2 1708.9ZM1165.3 1708.9C1165.2 1708.1 1165.3 1707 1164.9 1706.2C1163.7 1704.1 1158.7 1706.5 1157.4 1701.6C1156.3 1697.8 1157 1688.8 1157 1684.5C1157 1678.2 1156.3 1657.7 1157.2 1653C1158.3 1647.3 1163.7 1650.1 1164.9 1647.7C1165.3 1646.9 1165.2 1645.8 1165.3 1645C1155.4 1644.9 1145.4 1644.9 1135.5 1645.1C1135.7 1645.9 1135.7 1647.2 1136.2 1647.9C1137.5 1649.8 1141.3 1648.2 1142.9 1651.2C1144.7 1654.7 1143.8 1668.3 1143.8 1672.9C1134.9 1673.2 1125.9 1673.1 1117.1 1672.9C1117 1668.6 1116.1 1654.6 1117.8 1651.3C1119.4 1648.2 1123 1649.8 1124.4 1647.9C1124.9 1647.3 1124.9 1645.9 1125.1 1645.1C1115.1 1644.8 1105 1644.8 1095 1645.1C1095.2 1645.9 1095 1647.1 1095.5 1647.8C1096.9 1650.2 1102.1 1647.2 1103.5 1653.2C1104.5 1657.3 1103.8 1680.8 1103.8 1686.8C1103.8 1691.1 1104.6 1698.2 1103.2 1702.1C1101.8 1706.1 1097.7 1704 1096.2 1706.1C1095.7 1706.8 1095.7 1708.1 1095.5 1708.9C1105.4 1709.1 1115.3 1709.1 1125.2 1708.9C1125 1708.1 1125.1 1706.9 1124.7 1706.2C1123.6 1704.2 1119.2 1705.9 1117.6 1702.4C1116.2 1699.1 1117 1682.6 1117.1 1678C1126 1678 1134.9 1677.8 1143.8 1678.2C1143.8 1682.9 1144.6 1699.3 1142.9 1702.7C1141.3 1706 1137 1704.2 1135.5 1706.1C1135.1 1706.8 1135.1 1708.1 1134.9 1708.8C1145 1709.3 1155.2 1709.1 1165.3 1708.9ZM1344.9 1709.9C1344.8 1709.1 1345.1 1708 1344.8 1707.2C1344.3 1706.2 1342.7 1705.7 1341.8 1705C1340.1 1703.7 1338.6 1702 1337.2 1700.3C1332 1693.5 1327.7 1685.9 1323.8 1678.4C1327.3 1676.5 1330.7 1674.6 1333.1 1671.3C1338.8 1663.5 1335.7 1651.1 1326.7 1647.3C1318.6 1643.8 1293.6 1644.9 1283.8 1645.1C1283.9 1645.8 1283.9 1647.2 1284.3 1647.9C1285.7 1650 1290 1647.7 1291.5 1652.5C1292.7 1656.4 1292 1664.3 1292 1668.6C1292 1674.6 1292.7 1696.5 1291.7 1700.8C1290.4 1706.5 1285.4 1703.8 1283.9 1706.2C1283.4 1706.9 1283.5 1708.1 1283.3 1708.9C1293.3 1709.2 1303.2 1709 1313.1 1709C1313 1708.2 1313.1 1707 1312.8 1706.3C1311.8 1704.3 1307 1705.8 1305.4 1702.3C1304.1 1699.2 1304.8 1685.9 1304.9 1681.8C1306.5 1681.9 1308.1 1681.7 1309.7 1682.5C1313.7 1684.5 1319.9 1698.7 1323.4 1703.1C1328.5 1709.5 1337.3 1710.1 1344.9 1709.9ZM1399.2 1708.9C1399.1 1708.2 1399.1 1706.8 1398.7 1706.1C1397.5 1704.2 1393 1706.2 1391.5 1702C1390.3 1698.6 1391 1690.3 1391 1686.3C1391 1679.8 1390.4 1658.3 1391.2 1653.5C1392.3 1647.2 1397.8 1650.1 1398.8 1647.7C1399.1 1646.9 1398.9 1645.8 1399.1 1645C1389.3 1645 1379.5 1644.9 1369.7 1645.1C1369.8 1645.9 1369.7 1647 1370.1 1647.7C1371.5 1650.4 1376.3 1647 1377.6 1653.7C1378.4 1657.8 1377.8 1680 1377.8 1685.9C1377.8 1690.6 1378.6 1697.9 1377.1 1702.2C1375.8 1706 1371.4 1704.1 1370.1 1706.2C1369.7 1706.9 1369.8 1708.1 1369.6 1708.9C1379.5 1709.1 1389.4 1709.1 1399.2 1708.9ZM1556.4 1708.9C1556.2 1708.2 1556.3 1707 1555.9 1706.3C1554.8 1704.7 1550.2 1705.8 1548.2 1703.2C1547.5 1702.2 1547.2 1701 1547.1 1699.9C1546.7 1696.8 1546.6 1682.8 1547.2 1680C1548.3 1674.6 1558.3 1657.3 1562 1653C1565.2 1649.1 1570.4 1648.7 1570.9 1647.7C1571.3 1647 1571.2 1645.9 1571.3 1645C1563.7 1645 1556.1 1644.9 1548.5 1645.1C1549.9 1650.1 1549 1647.6 1555.1 1650.5C1554 1658.4 1548.1 1668.2 1544.4 1675.4C1539.9 1667.6 1534.8 1659 1531.8 1650.5C1537.8 1647.6 1536.8 1649.9 1538.1 1645.2C1528.6 1644.8 1519 1644.9 1509.5 1645.1C1509.7 1645.9 1509.7 1646.9 1510 1647.7C1510.4 1648.6 1515.6 1649.6 1518 1653.1C1521.3 1657.8 1531.8 1676.3 1533.4 1681.4C1534.3 1684.4 1534.2 1699.5 1533 1702.3C1531.3 1706.4 1527.3 1704.2 1525.1 1706.1C1524.5 1706.6 1524 1708.1 1523.6 1708.6C1534.4 1709.7 1545.6 1709.1 1556.4 1708.9ZM551.6 1708.9C552.9 1703.6 553.9 1698.3 555 1692.9C554.2 1692.8 553.2 1692.3 552.3 1692.4C551.2 1692.6 547.6 1700.4 545 1702.5C541.1 1705.6 532 1705.3 527.4 1704.1C522.7 1702.8 524 1695.6 524 1692C524 1685.2 523.3 1657 524.4 1652.5C525.6 1647.6 530.7 1649.9 531.8 1647.8C532.1 1647 532 1645.8 532.1 1645C522.3 1644.9 512.3 1644.8 502.5 1645.1C502.7 1645.9 502.7 1647.2 503.2 1647.9C504.7 1649.9 508.7 1648.1 510.1 1651.6C511.7 1655.8 510.8 1662.4 510.8 1666.9C510.8 1673.6 511.6 1696.6 510.3 1701.5C509.1 1706.5 504.7 1703.9 503.2 1706.1C502.7 1706.8 502.7 1708.1 502.5 1708.9C518.8 1709.3 535.3 1709.4 551.6 1708.9ZM772.8 1677.9C772.8 1668.8 772 1658.9 773.2 1650C774 1649.7 774.7 1649.3 775.5 1649.1C789.5 1646.4 794.4 1665.8 786.2 1674.4C782.6 1678.1 777.7 1678 772.8 1677.9ZM1304.8 1677.9C1304.8 1668.8 1304 1658.9 1305.2 1650C1306 1649.7 1306.7 1649.3 1307.5 1649.1C1321.5 1646.4 1326.4 1665.8 1318.2 1674.4C1314.6 1678.1 1309.7 1678 1304.8 1677.9ZM434.9 1682.9C437.5 1675.9 440 1668.9 442.6 1661.8C445.5 1668.6 447.7 1675.8 450.1 1682.9C445 1683 440 1683 434.9 1682.9ZM914.9 1682.9C917.5 1675.9 920 1668.9 922.6 1661.8C925.5 1668.6 927.7 1675.8 930.1 1682.9C925 1683 920 1683 914.9 1682.9ZM1212.9 1682.9C1215.5 1675.9 1218 1668.9 1220.6 1661.8C1223.5 1668.6 1225.7 1675.8 1228.1 1682.9C1223 1683 1218 1683 1212.9 1682.9Z"/></g>
 </svg>
       </h1>
-
-      <div class="copy">
-      <span class="eyebrow"><span class="dot"></span>قريباً<span class="sep" aria-hidden="true"></span><span lang="fr">Bientôt</span></span>
-
-      <p class="verse">﴿وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ﴾<cite>[المائدة: 2]</cite></p>
-
-      <p class="headline">معاً، نصنع <em>الخير</em><br> في كل ربوع الجزائر</p>
-
-      <p class="lede">موقعنا الرسمي قيد الإنشاء… نلقاكم قريباً بإذن الله.</p>
-
-      <div class="ornament" aria-hidden="true">
-        <span class="line"></span>
-        <svg viewBox="-10 -10 20 20"><g fill="#E30613"><path d="M-5.6-5.6h11.2v11.2h-11.2z"/><path d="M0-7.9 7.9 0 0 7.9-7.9 0z"/></g><circle r="2.4" fill="#ffffff"/></svg>
-        <span class="line"></span>
-      </div>
-
-      <p class="fr" lang="fr" dir="ltr">Ensemble, faisons le bien partout en Algérie — notre site officiel arrive bientôt.</p>
+      <div class="hero-copy">
+        <p class="verse">﴿وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ﴾<cite>[المائدة: 2]</cite></p>
+        <p class="headline">معاً، نصنع <em>الخير</em><br> في كل ربوع الجزائر</p>
+        <p class="lede">جمعية خيرية وطنية تعمل لصالح الفئات المحتاجة، بروح التضامن والتكافل والمواطنة.</p>
+        <div class="actions">
+          <a class="btn" href="#goals">تعرّف على أهدافنا</a>
+          <a class="btn btn-ghost" href="#volunteer"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg><span>تطوّع معنا</span></a>
+        </div>
+        <p class="fr" lang="fr" dir="ltr">Ensemble, faisons le bien partout en Algérie.</p>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <span>© 2026 جزائر الخير · <span lang="en" dir="ltr">Algeria Charity</span></span>
-    <button class="motion-toggle" type="button" aria-pressed="false" hidden>إيقاف الحركة</button>
-    <a class="mail" href="mailto:contact@djazairelkheir.com" dir="ltr">contact@djazairelkheir.com</a>
-  </footer>
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="kicker">من نحن</p>
+        <h2>جمعية خيرية وطنية،<br> في خدمة الفئات المحتاجة</h2>
+        <p class="prose">تقوم جمعية جزائر الخير بالأعمال الخيرية والاجتماعية والإنسانية ذات الطابع التضامني والتنموي لصالح الفئات المحتاجة، وتسهم في دعم جهود الدولة في محاربة الفقر والأمية والأمراض المزمنة، وفي تعزيز التضامن الوطني وحماية الأسرة والطفولة.</p>
+        <ul class="values" aria-label="قيمنا">
+          <li>التضامن</li><li>التكافل</li><li>المواطنة</li>
+        </ul>
+      </div>
+      <div class="card reveal" style="--d:.12s">
+        <h3>من نرافق</h3>
+        <p class="hint">الفئات التي نضعها في صميم عملنا.</p>
+        <ul class="chips">
+          <li>الأيتام والأطفال</li><li>الأرامل</li><li>المسنّون</li><li>ذوو الإعاقة</li>
+          <li>المرضى</li><li>المنكوبون</li><li>المشرّدون</li><li>الأسر المحتاجة</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section goals" id="goals">
+    <div class="wrap">
+      <div class="goals-head reveal">
+        <p class="kicker">أهدافنا</p>
+        <h2>عشرة أهداف، ووجهة واحدة: الخير</h2>
+      </div>
+      <ol class="goal-grid">
+        <li class="goal reveal">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" /></svg></span>
+          <div class="goal-head"><h3>العمل الخيري والإنساني</h3><span class="goal-no">01</span></div>
+          <p>القيام بالأعمال الخيرية والاجتماعية والإنسانية ذات الطابع التضامني والتنموي لصالح الفئات المحتاجة.</p>
+        </li>
+        <li class="goal reveal" style="--d:.06s">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span>
+          <div class="goal-head"><h3>دعم جهود الدولة</h3><span class="goal-no">02</span></div>
+          <p>دعم جهود الدولة في محاربة الفقر والأمية والأمراض المزمنة وتعزيز التضامن الوطني وحماية الأسرة والطفولة.</p>
+        </li>
+        <li class="goal reveal">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg></span>
+          <div class="goal-head"><h3>حماية الشباب</h3><span class="goal-no">03</span></div>
+          <p>المساهمة في محاربة الآفات الاجتماعية وحماية الشباب من أخطارها من خلال البرامج التثقيفية والتربوية.</p>
+        </li>
+        <li class="goal reveal" style="--d:.06s">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg></span>
+          <div class="goal-head"><h3>ثقافة التطوّع</h3><span class="goal-no">04</span></div>
+          <p>تشجيع وتنمية ثقافة التطوع لدى الشباب بما يفيد البيئة والمجتمع ومعالجة أسباب الفقر ومظاهره.</p>
+        </li>
+        <li class="goal reveal">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span>
+          <div class="goal-head"><h3>مراكز الرعاية</h3><span class="goal-no">05</span></div>
+          <p>إنشاء المراكز والمؤسسات الخيرية المختصة والتي تُعنى برعاية الأرامل، الأطفال، الأيتام، المسنين، المعوقين في إطار التشريع والتنظيم المعمول به.</p>
+        </li>
+        <li class="goal reveal" style="--d:.06s">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></svg></span>
+          <div class="goal-head"><h3>التضامن والمواطنة</h3><span class="goal-no">06</span></div>
+          <p>الإسهام في تنمية الثقافة الاجتماعية التي تحفظ للمجتمع روح التضامن والتكافل والمواطنة والهوية الوطنية والتربية على حقوق الإنسان.</p>
+        </li>
+        <li class="goal reveal">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m4.93 4.93 4.24 4.24" /><path d="m14.83 9.17 4.24-4.24" /><path d="m14.83 14.83 4.24 4.24" /><path d="m9.17 14.83-4.24 4.24" /><circle cx="12" cy="12" r="4" /></svg></span>
+          <div class="goal-head"><h3>الإغاثة</h3><span class="goal-no">07</span></div>
+          <p>تنظيم المشاريع والحملات الإغاثية للمنكوبين والمرضى والمشردين.</p>
+        </li>
+        <li class="goal reveal" style="--d:.06s">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 5v16" /><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></svg></span>
+          <div class="goal-head"><h3>التوعية</h3><span class="goal-no">08</span></div>
+          <p>نشر المطبوعات والدراسات والاهتمام بالتوعية الاجتماعية بين المواطنين.</p>
+        </li>
+        <li class="goal reveal">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></span>
+          <div class="goal-head"><h3>تأهيل المتطوعين</h3><span class="goal-no">09</span></div>
+          <p>العمل على توفير التدريب والتأهيل لنشطاء العمل التطوعي والإنساني.</p>
+        </li>
+        <li class="goal reveal" style="--d:.06s">
+          <span class="goal-icon"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" /></svg></span>
+          <div class="goal-head"><h3>التعاون والتنسيق</h3><span class="goal-no">10</span></div>
+          <p>التعاون والتنسيق مع المؤسسات الرسمية والجمعيات المثيلة في المشاريع ذات الأهداف المشتركة.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="volunteer">
+    <div class="wrap">
+      <div class="band reveal">
+        <div>
+          <p class="kicker">تطوّع معنا</p>
+          <h2>كن لبنةً في بناء الخير</h2>
+          <p class="prose">نعمل على تشجيع ثقافة التطوّع لدى الشباب، وعلى تدريب نشطاء العمل التطوعي والإنساني وتأهيلهم. إن أردت أن تمنح من وقتك أو خبرتك، فمكانك معنا.</p>
+        </div>
+        <div class="band-cta">
+          <a class="btn btn-light" href="mailto:contact@djazairelkheir.com?subject=%D8%AA%D8%B7%D9%88%D9%91%D8%B9%20%E2%80%94%20%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg><span>راسلنا للتطوّع</span></a>
+          <small>أخبرنا في رسالتك كيف تحب أن تساهم.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="kicker">تواصل</p>
+        <h2>يسعدنا تواصلكم</h2>
+        <p class="prose">للاستفسار، أو للتعاون والتنسيق مع المؤسسات الرسمية والجمعيات في المشاريع ذات الأهداف المشتركة.</p>
+      </div>
+      <a class="mail-card reveal" style="--d:.12s" href="mailto:contact@djazairelkheir.com">
+        <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg></span>
+        <span><span class="label">البريد الإلكتروني</span><span class="addr" dir="ltr">contact@djazairelkheir.com</span></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="/favicon.svg?v=20261016" alt="" width="34" height="34">
+      <div><strong>جزائر الخير</strong><span lang="en" dir="ltr">ALGERIA CHARITY</span></div>
+    </div>
+    <p class="privacy">لا يجمع هذا الموقع أي بيانات شخصية، ولا يستعمل ملفات تعريف الارتباط.</p>
+    <div class="foot-meta">
+      <span>© 2026 جزائر الخير</span>
+      <a href="mailto:contact@djazairelkheir.com" dir="ltr">contact@djazairelkheir.com</a>
+      <button class="motion-toggle" type="button" aria-pressed="false" hidden>إيقاف الحركة</button>
+    </div>
+  </div>
+</footer>
 
 <script>
 (() => {
-  /* pause / play (WCAG 2.2.2) */
+  const root = document.documentElement;
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  /* reveal sections as they enter the viewport. Only what starts below the first screen is hidden, and two
+     independent triggers (IntersectionObserver + scroll position) uncover it, so nothing can stay invisible. */
+  const pending = [...document.querySelectorAll(".reveal")]
+    .filter((el) => el.getBoundingClientRect().top > innerHeight * 0.9);
+  pending.forEach((el) => el.classList.add("pending"));
+  const show = (el) => el.classList.add("in");
+  const check = () => {
+    for (const el of pending) if (!el.classList.contains("in") && el.getBoundingClientRect().top < innerHeight * 0.92) show(el);
+  };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    pending.forEach((el) => io.observe(el));
+  }
+  addEventListener("scroll", check, { passive: true });
+  addEventListener("resize", check);
+  addEventListener("hashchange", () => setTimeout(check, 50));
+
+  /* pause / play (WCAG 2.2.2) */
   const toggle = document.querySelector(".motion-toggle");
   let paused = false;
   toggle.hidden = false;
   toggle.addEventListener("click", () => {
     paused = !paused;
-    document.documentElement.classList.toggle("paused", paused);
+    root.classList.toggle("paused", paused);
     toggle.setAttribute("aria-pressed", String(paused));
     toggle.textContent = paused ? "تشغيل الحركة" : "إيقاف الحركة";
   });
