@@ -42,6 +42,8 @@
       "alternateName": ["جمعية جزائر الخير", "Djazair El Kheir", "Algeria Charity"],
       "url": "https://djazairelkheir.com/",
       "email": "contact@djazairelkheir.com",
+      "foundingDate": "2012-01-15",
+      "address": { "@type": "PostalAddress", "streetAddress": "حي دوزي 03، رقم 103", "addressLocality": "باب الزوار", "addressRegion": "الجزائر", "addressCountry": "DZ" },
       "slogan": "معاً، نصنع الخير في كل ربوع الجزائر",
       "areaServed": { "@type": "Country", "name": "Algeria" },
       "logo": {
@@ -131,7 +133,7 @@ body {
 img, svg { display: block; }
 a { color: inherit; }
 ul, ol { list-style: none; }
-section[id] { scroll-margin-top: 84px; }
+section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .skip { position: absolute; inset-inline-start: 12px; top: -60px; z-index: 50; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; }
@@ -229,6 +231,7 @@ section[id] { scroll-margin-top: 84px; }
 .hero-copy > :nth-child(3) { animation-delay: 1.2s; }
 .hero-copy > :nth-child(4) { animation-delay: 1.35s; }
 .hero-copy > :nth-child(5) { animation-delay: 1.5s; }
+.hero-copy > :nth-child(6) { animation-delay: 1.65s; }
 .verse { font: 400 clamp(19px, 2.1vw, 25px)/1.6 var(--serif); color: var(--green-deep); }
 .verse cite { font: normal 600 .55em var(--sans); color: var(--muted); margin-inline-start: .5em; white-space: nowrap; }
 .headline { font: 700 clamp(34px, 4.6vw, 60px)/1.3 var(--serif); text-wrap: balance; }
@@ -325,7 +328,97 @@ section[id] { scroll-margin-top: 84px; }
 .band-cta { display: grid; justify-items: center; gap: 10px; text-align: center; }
 .band-cta small { font-size: 13.5px; color: rgba(255, 255, 255, .85); max-width: 24ch; line-height: 1.7; }
 
-#volunteer { padding-bottom: 0; }
+/* hero badge */
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--hairline); background: rgba(255, 255, 255, .8);
+  font: 600 13.5px/1.2 var(--sans); color: var(--muted);
+}
+.badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(92, 160, 27, .18); }
+
+/* about: facts + organisation */
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 26px; max-width: 600px; }
+.fact { background: var(--green-mist); border-radius: 16px; padding: 14px 16px 15px; }
+.fact b { display: block; font: 600 28px/1.1 var(--sans); color: var(--green-night); }
+.fact span { display: block; margin-top: 6px; font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+.org { margin-top: 20px; font-size: 15.5px; line-height: 1.9; color: var(--muted); max-width: 62ch; }
+.org strong { color: var(--ink); font-weight: 600; }
+
+/* vision · mission · values */
+.vmv { background: var(--paper-mid); border-block: 1px solid var(--hairline); }
+.vmv-head { display: grid; gap: 4px; margin-bottom: clamp(26px, 4vw, 40px); }
+.vmv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.vmv-card {
+  position: relative; overflow: hidden; isolation: isolate;
+  border-radius: var(--radius); padding: 26px 24px 28px; color: #fff;
+  box-shadow: 0 24px 44px -30px rgba(28, 36, 24, .7);
+}
+.vmv-card::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: var(--lattice-light); background-size: 96px 96px; opacity: .07; }
+.vmv-card.vision  { background: linear-gradient(155deg, #78AE1D 0%, #3D7413 100%); }
+.vmv-card.mission { background: linear-gradient(155deg, #3D7413 0%, #2B520D 100%); }
+.vmv-card.values  { background: linear-gradient(155deg, #E30613 0%, #A80410 100%); }
+.vmv-card .ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: rgba(255, 255, 255, .16); margin-bottom: 16px; }
+.vmv-card .ic svg { width: 24px; height: 24px; }
+.vmv-card h3 { font: 700 25px/1.3 var(--serif); margin-bottom: 10px; }
+.vmv-card p { font-size: 16.5px; line-height: 1.9; color: rgba(255, 255, 255, .94); }
+.vmv-card ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.vmv-card li { padding: 6px 13px; border-radius: 999px; background: rgba(255, 255, 255, .17); font-weight: 600; font-size: 15px; }
+.pledges { margin-top: clamp(30px, 4vw, 48px); display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 20px 48px; align-items: start; }
+.pledges h3 { font: 700 26px/1.3 var(--serif); }
+.pledges .hint { font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+.pledges ul { columns: 2; column-gap: 36px; }
+.pledges li { break-inside: avoid; position: relative; padding-inline-start: 20px; margin-bottom: 10px; font-size: 15.5px; line-height: 1.8; color: var(--muted); }
+.pledges li::before { content: ""; position: absolute; inset-inline-start: 2px; top: .72em; width: 7px; height: 7px; background: var(--green); transform: rotate(45deg); border-radius: 1px; }
+
+/* social weeks */
+.weeks { background: var(--paper); }
+.weeks-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.week {
+  display: grid; gap: 14px; align-content: start;
+  background: #fff; border: 1px solid var(--hairline); border-radius: 18px; padding: 20px 18px 22px; box-shadow: var(--shadow);
+  transition: transform .25s, border-color .25s;
+}
+.week:hover { transform: translateY(-3px); border-color: rgba(92, 160, 27, .4); }
+.week .ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--green-mist); color: var(--green-deep); }
+.week .ic svg { width: 24px; height: 24px; }
+.week small { display: block; font: 600 12.5px/1 var(--sans); color: var(--red); margin-bottom: 6px; letter-spacing: .02em; }
+.week h3 { font: 700 19px/1.45 var(--serif); }
+
+/* volunteer categories inside the band */
+.band .cats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.band .cats li { padding: 7px 14px; border-radius: 999px; background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .25); font-weight: 600; font-size: 15px; }
+
+/* donate */
+.donate { margin-top: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.donate-intro h3 { font: 700 clamp(24px, 2.6vw, 32px)/1.3 var(--serif); margin: 12px 0 10px; }
+.donate-intro p { font-size: 15.5px; line-height: 1.85; color: var(--muted); }
+.acct {
+  display: grid; gap: 10px; align-content: start;
+  background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius); padding: 22px 24px 20px; box-shadow: var(--shadow);
+}
+.acct .bank { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 15.5px; line-height: 1.5; }
+.acct .bank .ic { width: 42px; height: 42px; flex: none; border-radius: 12px; display: grid; place-items: center; background: var(--green-mist); color: var(--green-deep); }
+.acct .bank .ic svg { width: 22px; height: 22px; }
+.acct .bank small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); }
+.acct .num { font: 600 clamp(18px, 1.9vw, 23px)/1.35 var(--sans); letter-spacing: .03em; color: var(--green-night); unicode-bidi: isolate; overflow-wrap: anywhere; }
+.acct .holder { font-size: 13.5px; color: var(--muted); }
+.copy-btn {
+  justify-self: start; display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 13px; border-radius: 999px; border: 1px solid var(--hairline); background: #fff; cursor: pointer;
+  font: 600 13px/1.2 var(--sans); color: var(--green-deep); transition: background .2s, border-color .2s;
+}
+.copy-btn:hover { background: var(--green-mist); }
+.copy-btn svg { width: 15px; height: 15px; }
+.copy-btn.done { background: var(--green-mist); border-color: rgba(92, 160, 27, .45); }
+
+.weeks { padding-bottom: clamp(36px, 5vw, 64px); }
+#act { padding-top: clamp(20px, 3vw, 40px); padding-bottom: 0; }
+
+/* contact: e-mail + seat */
+.contact-cards { display: grid; gap: 14px; }
+.mail-card.seat .ic { background: var(--green-mist); color: var(--green-deep); }
+.mail-card.seat .addr { font: 600 clamp(15px, 1.4vw, 18px)/1.6 var(--sans); color: var(--ink); }
+.mail-card.seat:hover { transform: none; border-color: var(--hairline); }
 
 /* contact */
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
@@ -395,8 +488,14 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
   .lattice { -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, transparent 35%, #000 90%); }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .goal-grid { grid-template-columns: 1fr; }
+  .vmv-grid { grid-template-columns: 1fr; }
+  .pledges { grid-template-columns: 1fr; }
+  .weeks-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .donate { grid-template-columns: 1fr; }
+  .facts { max-width: none; }
   .band { grid-template-columns: 1fr; text-align: center; justify-items: center; }
   .band .prose { margin-inline: auto; }
+  .band .cats { justify-content: center; }
   .foot { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .foot-meta { justify-content: center; }
 }
@@ -406,13 +505,20 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
   .brand-name { font-size: 20px; }
   .nav { order: 3; width: 100%; overflow-x: auto; scrollbar-width: none; padding-block: 6px 8px; margin-inline: -6px; }
   .nav::-webkit-scrollbar { display: none; }
-  .nav a { flex: none; font-size: 14px; padding: 6px 8px; }
+  .nav a { flex: none; font-size: 14px; padding: 6px 6px; }
   .lang { padding: 5px 10px; font-size: 13px; }
   .bar .btn-small span { display: none; }
   .bar .btn-small { padding: 9px 11px; }
-  section[id] { scroll-margin-top: 112px; }
+  section[id], #volunteer, #donate { scroll-margin-top: 112px; }
   .goal { grid-template-columns: 46px minmax(0, 1fr); padding: 18px; gap: 4px 14px; }
   .goal-icon { width: 46px; height: 46px; border-radius: 14px; }
+  .pledges ul { columns: 1; }
+  .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .fact { padding: 12px 10px; }
+  .fact b { font-size: 22px; }
+  .fact span { font-size: 12px; }
+  .week { padding: 16px 14px 18px; gap: 10px; }
+  .week h3 { font-size: 17px; }
   .motes span:nth-child(n+9) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -435,7 +541,8 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
     <nav class="nav" aria-label="أقسام الصفحة">
       <a href="#about">من نحن</a>
       <a href="#goals">أهدافنا</a>
-      <a href="#volunteer">تطوّع معنا</a>
+      <a href="#programs">برامجنا</a>
+      <a href="#act">تطوّع وتبرّع</a>
       <a href="#contact">تواصل</a>
     </nav>
     <a class="lang" href="/fr/" hreflang="fr" lang="fr">Français</a>
@@ -490,12 +597,13 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
 </svg>
       </h1>
       <div class="hero-copy">
+        <p class="badge">جمعية وطنية معتمدة منذ 2012</p>
         <p class="verse">﴿وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ﴾<cite>[المائدة: 2]</cite></p>
         <p class="headline">معاً، نصنع <em>الخير</em><br> في كل ربوع الجزائر</p>
         <p class="lede">جمعية خيرية وطنية تعمل لصالح الفئات المحتاجة، بروح التضامن والتكافل والمواطنة.</p>
         <div class="actions">
           <a class="btn" href="#goals">تعرّف على أهدافنا</a>
-          <a class="btn btn-ghost" href="#volunteer"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg><span>تطوّع معنا</span></a>
+          <a class="btn btn-ghost" href="#act"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg><span>تطوّع أو تبرّع</span></a>
         </div>
         <p class="fr" lang="fr" dir="ltr">Ensemble, faisons le bien partout en Algérie.</p>
       </div>
@@ -507,10 +615,13 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
       <div class="reveal">
         <p class="kicker">من نحن</p>
         <h2>جمعية خيرية وطنية،<br> في خدمة الفئات المحتاجة</h2>
-        <p class="prose">تقوم جمعية جزائر الخير بالأعمال الخيرية والاجتماعية والإنسانية ذات الطابع التضامني والتنموي لصالح الفئات المحتاجة، وتسهم في دعم جهود الدولة في محاربة الفقر والأمية والأمراض المزمنة، وفي تعزيز التضامن الوطني وحماية الأسرة والطفولة.</p>
-        <ul class="values" aria-label="قيمنا">
-          <li>التضامن</li><li>التكافل</li><li>المواطنة</li>
+        <p class="prose">جمعية جزائر الخير جمعية وطنية خيرية، اجتماعية وتربوية، تُعنى بالبعد التضامني والتنموي للشرائح المحتاجة. تقوم بالأعمال الخيرية والاجتماعية والإنسانية لصالح الفئات المحتاجة، وتسهم في دعم جهود الدولة في محاربة الفقر والأمية والأمراض المزمنة، وفي تعزيز التضامن الوطني وحماية الأسرة والطفولة.</p>
+        <ul class="facts">
+          <li class="fact"><b>2012</b><span>سنة التأسيس</span></li>
+          <li class="fact"><b>02</b><span>رقم وصل التسجيل</span></li>
+          <li class="fact"><b>8</b><span>أسابيع اجتماعية</span></li>
         </ul>
+        <p class="org">تأسست الجمعية في 15 جانفي 2012، وسُجّلت لدى وزارة الداخلية بوصل التسجيل رقم 02 المؤرخ في 06 جوان 2012. تُسيَّر الجمعية بإشراف <strong>رئيس الجمعية</strong> و<strong>المكتب الوطني</strong> و<strong>المجلس الوطني</strong>، وتمتد عبر <strong>المكاتب الولائية</strong> و<strong>المكاتب البلدية</strong>.</p>
       </div>
       <div class="card reveal" style="--d:.12s">
         <h3>من نرافق</h3>
@@ -518,6 +629,52 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
         <ul class="chips">
           <li>الأيتام والأطفال</li><li>الأرامل</li><li>المسنّون</li><li>ذوو الإعاقة</li>
           <li>المرضى</li><li>المنكوبون</li><li>المشرّدون</li><li>الأسر المحتاجة</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section vmv" id="vision">
+    <div class="wrap">
+      <div class="vmv-head reveal">
+        <p class="kicker">رؤيتنا ورسالتنا وقيمنا</p>
+        <h2>جزائر الخير… رؤية جديدة للعمل الخيري والإنساني</h2>
+        <p class="prose">جزائر الخير رؤية مجموعة من أهل الخير يحدوهم الأمل في جزائر المستقبل بقيمها الإنسانية والتضامنية، تنمو وتتبرعم فيها وشائج التعاون والتكافل بين أبناء الشعب الجزائري المعطاء.</p>
+      </div>
+      <div class="vmv-grid">
+        <div class="vmv-card vision reveal">
+          <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></svg></span>
+          <h3>رؤيتنا</h3>
+          <p>الريادة والتميز في العمل الخيري.</p>
+        </div>
+        <div class="vmv-card mission reveal" style="--d:.08s">
+          <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg></span>
+          <h3>رسالتنا</h3>
+          <p>تقديم الخدمة الإنسانية والرعاية الاجتماعية والتربوية للفئات المحتاجة من خلال مشاريع تضامنية وتنموية، وتطوير العمل التطوعي الإبداعي.</p>
+        </div>
+        <div class="vmv-card values reveal" style="--d:.16s">
+          <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10.5 3 8 9l4 13 4-13-2.5-6" /><path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" /><path d="M2 9h20" /></svg></span>
+          <h3>قيمنا</h3>
+          <ul><li>التعاون</li><li>التطوع</li><li>الشفافية</li><li>الإنسانية</li><li>المبادرة</li></ul>
+        </div>
+      </div>
+      <div class="pledges reveal">
+        <div>
+          <h3>فضاء رؤيتنا</h3>
+          <p class="hint">ما نلتزم به في عملنا اليومي.</p>
+        </div>
+        <ul>
+          <li>نُجمّع الخبرات</li>
+          <li>نوفّر التكوين</li>
+          <li>نرصد الاحتياجات</li>
+          <li>نرعى المحتاجين</li>
+          <li>نؤمّن المساعدة</li>
+          <li>نحفّز على الدعم والمساعدة لكل محتاج</li>
+          <li>نشجّع الأخلاق الفاضلة</li>
+          <li>ندعو للفهم المعتدل السليم والخلق القويم</li>
+          <li>نساهم في تنمية الروح الوطنية والاعتزاز بقيم الإسلام ومبادئه السامية</li>
+          <li>نسعى للأخذ بأيدي الشباب المبدع الطموح</li>
+          <li>نبادر إلى تبنّي الأفكار الإيجابية والتعبير عن البعد الإنساني والتعاون مع الشركاء</li>
         </ul>
       </div>
     </div>
@@ -584,17 +741,60 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
     </div>
   </section>
 
-  <section class="section" id="volunteer">
+  <section class="section weeks" id="programs">
     <div class="wrap">
-      <div class="band reveal">
+      <div class="goals-head reveal">
+        <p class="kicker">برامجنا</p>
+        <h2>أسابيعنا الاجتماعية</h2>
+        <p class="prose">ثمانية أسابيع اجتماعية تنظّمها الجمعية، لكل أسبوع منها موضوعه.</p>
+      </div>
+      <ul class="weeks-grid">
+        <li class="week reveal"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20" /><path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13" /></svg></span><div><small>أسبوع</small><h3>البيئة</h3></div></li>
+        <li class="week reveal" style="--d:.05s"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></span><div><small>أسبوع</small><h3>الأسرة</h3></div></li>
+        <li class="week reveal" style="--d:.1s"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></svg></span><div><small>أسبوع</small><h3>التوعية الصحية والوقاية من الآفات الاجتماعية</h3></div></li>
+        <li class="week reveal" style="--d:.15s"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" /></svg></span><div><small>أسبوع</small><h3>الوفاء لقوافل الشهداء</h3></div></li>
+        <li class="week reveal"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" /><path d="M8 10h8" /><path d="M8 18h8" /><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6" /><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" /></svg></span><div><small>أسبوع</small><h3>التضامن المدرسي</h3></div></li>
+        <li class="week reveal" style="--d:.05s"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 7v14" /><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" /><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5" /><rect x="3" y="7" width="18" height="4" rx="1" /></svg></span><div><small>أسبوع</small><h3>فرحة العيد بالتضامن تزيد</h3></div></li>
+        <li class="week reveal" style="--d:.1s"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg></span><div><small>أسبوع</small><h3>التطوع</h3></div></li>
+        <li class="week reveal" style="--d:.15s"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></svg></span><div><small>أسبوع</small><h3>القيم</h3></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="act">
+    <div class="wrap">
+      <div class="band reveal" id="volunteer">
         <div>
           <p class="kicker">تطوّع معنا</p>
           <h2>كن لبنةً في بناء الخير</h2>
           <p class="prose">نعمل على تشجيع ثقافة التطوّع لدى الشباب، وعلى تدريب نشطاء العمل التطوعي والإنساني وتأهيلهم. إن أردت أن تمنح من وقتك أو خبرتك، فمكانك معنا.</p>
+          <ul class="cats" aria-label="فئات المتطوعين">
+            <li>شباب الخير</li><li>نساء الخير</li><li>أهل الخير</li>
+          </ul>
         </div>
         <div class="band-cta">
           <a class="btn btn-light" href="mailto:contact@djazairelkheir.com?subject=%D8%AA%D8%B7%D9%88%D9%91%D8%B9%20%E2%80%94%20%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg><span>راسلنا للتطوّع</span></a>
           <small>أخبرنا في رسالتك كيف تحب أن تساهم.</small>
+        </div>
+      </div>
+
+      <div class="donate" id="donate">
+        <div class="donate-intro reveal">
+          <p class="kicker">تبرّع</p>
+          <h3>ساهم في مشاريع الخير</h3>
+          <p>تُوجَّه التبرعات إلى حسابَي الجمعية الرسميين باسم «جمعية جزائر الخير». لأي استفسار راسلنا على <a href="mailto:contact@djazairelkheir.com" dir="ltr">contact@djazairelkheir.com</a>.</p>
+        </div>
+        <div class="acct reveal" style="--d:.08s">
+          <div class="bank"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" /><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" /><path d="m2 16 6 6" /><circle cx="16" cy="9" r="2.9" /><circle cx="6" cy="5" r="3" /></svg></span><span>الحساب البريدي الجاري<small>بريد الجزائر — CCP</small></span></div>
+          <p class="num" dir="ltr">376883 <span lang="fr">clé</span> 25</p>
+          <p class="holder">باسم: جمعية جزائر الخير</p>
+          <button class="copy-btn" type="button" data-copy="376883 25" data-done="نُسخ" hidden><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg><span>نسخ الرقم</span></button>
+        </div>
+        <div class="acct reveal" style="--d:.16s">
+          <div class="bank"><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span><span>الحساب البنكي<small>القرض الشعبي الجزائري (CPA) — وكالة وادي كنيس</small></span></div>
+          <p class="num" dir="ltr">004 00121 4100004962 44</p>
+          <p class="holder">باسم: جمعية جزائر الخير</p>
+          <button class="copy-btn" type="button" data-copy="00400121410000496244" data-done="نُسخ" hidden><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg><span>نسخ الرقم</span></button>
         </div>
       </div>
     </div>
@@ -607,10 +807,16 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
         <h2>يسعدنا تواصلكم</h2>
         <p class="prose">للاستفسار، أو للتعاون والتنسيق مع المؤسسات الرسمية والجمعيات في المشاريع ذات الأهداف المشتركة.</p>
       </div>
-      <a class="mail-card reveal" style="--d:.12s" href="mailto:contact@djazairelkheir.com">
-        <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg></span>
-        <span><span class="label">البريد الإلكتروني</span><span class="addr" dir="ltr">contact@djazairelkheir.com</span></span>
-      </a>
+      <div class="contact-cards">
+        <a class="mail-card reveal" style="--d:.12s" href="mailto:contact@djazairelkheir.com">
+          <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg></span>
+          <span><span class="label">البريد الإلكتروني</span><span class="addr" dir="ltr">contact@djazairelkheir.com</span></span>
+        </a>
+        <div class="mail-card seat reveal" style="--d:.18s">
+          <span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg></span>
+          <span><span class="label">مقر الجمعية</span><span class="addr">حي دوزي 03، رقم 103، باب الزوار، الجزائر</span></span>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -633,6 +839,19 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
 <script>
 (() => {
   const root = document.documentElement;
+
+  /* copy account numbers (shown only where the Clipboard API exists, i.e. HTTPS) */
+  if (navigator.clipboard) {
+    document.querySelectorAll(".copy-btn").forEach((btn) => {
+      btn.hidden = false;
+      const label = btn.querySelector("span"), idle = label.textContent;
+      btn.addEventListener("click", async () => {
+        try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (e) { return; }
+        btn.classList.add("done"); label.textContent = btn.dataset.done;
+        setTimeout(() => { btn.classList.remove("done"); label.textContent = idle; }, 2000);
+      });
+    });
+  }
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   /* reveal sections as they enter the viewport. Only what starts below the first screen is hidden, and two
      independent triggers (IntersectionObserver + scroll position) uncover it, so nothing can stay invisible. */
