@@ -61,29 +61,18 @@
 <link rel="icon" href="/favicon-192.png?v=20261016" type="image/png" sizes="192x192">
 <link rel="icon" href="/favicon.svg?v=20261016" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261016">
-<link rel="preload" href="/fonts/amiri-lat-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/plex-lat-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cairo-lat.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-/* Self-hosted fonts (SIL OFL 1.1 — licences in /fonts). Arabic files are subset to the pages' text by
-   _build/build.py: edit the text in the template, then rebuild. Icons: Lucide (ISC), inlined at build time. */
+/* Self-hosted fonts (SIL OFL 1.1 — licences in /fonts). Cairo (variable) everywhere; Amiri only for the Quranic
+   verse, subset to the pages' text by _build/build.py. Icons: Lucide (ISC), inlined at build time. */
+@font-face { font-family: "Cairo"; font-style: normal; font-weight: 200 1000; font-display: swap;
+  src: url("/fonts/cairo-ar.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Cairo"; font-style: normal; font-weight: 200 1000; font-display: swap;
+  src: url("/fonts/cairo-lat.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: "Amiri"; font-style: normal; font-weight: 400; font-display: swap;
   src: url("/fonts/amiri-ar-400.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
-@font-face { font-family: "Amiri"; font-style: normal; font-weight: 700; font-display: swap;
-  src: url("/fonts/amiri-ar-700.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
-@font-face { font-family: "Amiri"; font-style: normal; font-weight: 400; font-display: swap;
-  src: url("/fonts/amiri-lat-400.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
-@font-face { font-family: "Amiri"; font-style: normal; font-weight: 700; font-display: swap;
-  src: url("/fonts/amiri-lat-700.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
 @font-face { font-family: "Amiri"; font-style: italic; font-weight: 400; font-display: swap;
   src: url("/fonts/amiri-lat-400i.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
-@font-face { font-family: "IBM Plex Sans Arabic"; font-style: normal; font-weight: 400; font-display: swap;
-  src: url("/fonts/plex-ar-400.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
-@font-face { font-family: "IBM Plex Sans Arabic"; font-style: normal; font-weight: 600; font-display: swap;
-  src: url("/fonts/plex-ar-600.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF; }
-@font-face { font-family: "IBM Plex Sans Arabic"; font-style: normal; font-weight: 400; font-display: swap;
-  src: url("/fonts/plex-lat-400.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
-@font-face { font-family: "IBM Plex Sans Arabic"; font-style: normal; font-weight: 600; font-display: swap;
-  src: url("/fonts/plex-lat-600.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
 
 /* Djazair El Kheir identity — colours sampled from the vector logo (PSD/Djazair-El-Kheir_Logo_Vector.svg). */
 :root {
@@ -102,8 +91,9 @@
   --paper-mid: #FBFCF7;
   --paper-low: #EFF6E0;
 
-  --serif: "Amiri", "Traditional Arabic", "Times New Roman", serif;
-  --sans: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  --serif: "Cairo", system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;   /* titles (heavier weights) */
+  --sans: "Cairo", system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;    /* text */
+  --quran: "Amiri", "Traditional Arabic", "Times New Roman", serif;                   /* the verse only */
   --radius: 20px;
   --shadow: 0 1px 2px rgba(28, 36, 24, .05), 0 12px 32px -18px rgba(28, 36, 24, .28);
   --lattice: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%235CA01B' stroke-width='.9'%3E%3Cpath d='M30 30h36v36H30z'/%3E%3Cpath d='M48 22.5 73.5 48 48 73.5 22.5 48z'/%3E%3Cpath d='M48 0v22.5M48 73.5V96M0 48h22.5M73.5 48H96M0 0l30 30M96 0 66 30M96 96 66 66M0 96l30-30'/%3E%3C/g%3E%3C/svg%3E");
@@ -157,7 +147,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 .bar { display: flex; align-items: center; gap: 24px; min-height: 68px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-inline-end: auto; }
 .brand img { width: 40px; height: 40px; }
-.brand-name { font: 700 23px/1.1 var(--serif); }
+.brand-name { font: 800 21px/1.2 var(--serif); }
 .brand-sub { display: block; font: 600 9.5px/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-top: 4px; }
 .nav { display: flex; gap: 6px; }
 .nav a { padding: 8px 12px; border-radius: 999px; font-weight: 600; font-size: 15px; color: var(--muted); text-decoration: none; transition: color .2s, background .2s; }
@@ -168,7 +158,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
   transition: background .2s, border-color .2s;
 }
 .lang:hover { background: var(--green-mist); border-color: rgba(92, 160, 27, .4); }
-.lang[lang="ar"] { font-family: var(--serif); font-size: 17px; padding-block: 4px; }
+.lang[lang="ar"] { font-family: var(--serif); font-size: 15px; font-weight: 700; padding-block: 4px; }
 
 /* ---------- hero ---------- */
 .hero {
@@ -223,14 +213,14 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 .hero-copy > :nth-child(4) { animation-delay: 1.35s; }
 .hero-copy > :nth-child(5) { animation-delay: 1.5s; }
 .hero-copy > :nth-child(6) { animation-delay: 1.65s; }
-.verse { font: 400 clamp(19px, 2.1vw, 25px)/1.6 var(--serif); color: var(--green-deep); }
+.verse { font: 400 clamp(19px, 2.1vw, 25px)/1.6 var(--quran); color: var(--green-deep); }
 .verse cite { font: normal 600 .55em var(--sans); color: var(--muted); margin-inline-start: .5em; white-space: nowrap; }
-.headline { font: 700 clamp(34px, 4.6vw, 60px)/1.3 var(--serif); text-wrap: balance; }
+.headline { font: 800 clamp(30px, 4vw, 52px)/1.45 var(--serif); text-wrap: balance; }
 .headline em { font-style: normal; color: var(--red); white-space: nowrap; }
 .lede { font-size: clamp(16px, 1.45vw, 19px); line-height: 1.9; color: var(--muted); max-width: 36ch; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
-.fr { font: italic 400 clamp(15px, 1.3vw, 17px)/1.6 var(--serif); color: var(--muted); text-align: right; }
-.alt-ar { font: 700 clamp(17px, 1.6vw, 21px)/1.6 var(--serif); color: var(--green-deep); }
+.fr { font: 400 clamp(14px, 1.2vw, 16px)/1.6 var(--sans); color: var(--muted); text-align: right; }
+.alt-ar { font: 700 clamp(15px, 1.4vw, 18px)/1.6 var(--serif); color: var(--green-deep); }
 
 /* ---------- French page (dir="ltr"): mirrored backdrop, translation under the verse, Latin typography ---------- */
 [dir="ltr"] .lattice {
@@ -239,16 +229,16 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 }
 [dir="ltr"] .verse { display: grid; gap: 2px; justify-items: start; }
 [dir="ltr"] .verse .ayah { font-size: 1em; color: var(--green-deep); }
-[dir="ltr"] .verse .meaning { font: italic 400 .78em/1.5 var(--serif); color: var(--ink); }
+[dir="ltr"] .verse .meaning { font: italic 400 .78em/1.5 var(--quran); color: var(--ink); }
 [dir="ltr"] .verse cite { display: block; margin: 4px 0 0; font-size: .66em; font-style: normal; }
-[dir="ltr"] .headline { font-size: clamp(32px, 4.2vw, 56px); line-height: 1.15; letter-spacing: -.01em; }
-[dir="ltr"] .section h2 { line-height: 1.2; }
-[dir="ltr"] .brand-name { font-size: 22px; letter-spacing: .01em; }
+[dir="ltr"] .headline { font-size: clamp(30px, 3.9vw, 50px); line-height: 1.2; letter-spacing: -.01em; }
+[dir="ltr"] .section h2 { line-height: 1.25; }
+[dir="ltr"] .brand-name { font-size: 20px; letter-spacing: 0; }
 [dir="ltr"] .kicker { letter-spacing: .08em; text-transform: uppercase; font-size: 12.5px; }
-[dir="ltr"] .goal h3 { font-size: 20px; line-height: 1.3; }
+[dir="ltr"] .goal h3 { font-size: 18px; line-height: 1.35; }
 [dir="ltr"] .goal p, [dir="ltr"] .prose { line-height: 1.75; }
-[dir="ltr"] .values { font-size: 21px; }
-[dir="ltr"] .foot-brand strong { font-size: 17px; }
+[dir="ltr"] .values { font-size: 18px; }
+[dir="ltr"] .foot-brand strong { font-size: 16px; }
 
 /* ---------- sections ---------- */
 .section { padding-block: clamp(64px, 9vw, 120px); }
@@ -257,7 +247,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
   font: 600 14px/1 var(--sans); color: var(--green-deep); letter-spacing: .02em;
 }
 .kicker::before { content: ""; width: 9px; height: 9px; background: var(--red); transform: rotate(45deg); border-radius: 1px; }
-.section h2 { font: 700 clamp(29px, 3.5vw, 44px)/1.35 var(--serif); margin: 14px 0 18px; text-wrap: balance; }
+.section h2 { font: 800 clamp(26px, 3vw, 38px)/1.5 var(--serif); margin: 14px 0 18px; text-wrap: balance; }
 .prose { font-size: clamp(16px, 1.3vw, 18px); line-height: 2; color: var(--muted); max-width: 62ch; }
 
 /* about */
@@ -266,7 +256,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
   background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius);
   padding: clamp(22px, 3vw, 34px); box-shadow: var(--shadow);
 }
-.card h3 { font: 700 22px/1.4 var(--serif); margin-bottom: 6px; }
+.card h3 { font: 700 19px/1.5 var(--serif); margin-bottom: 6px; }
 .card .hint { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chips li {
@@ -274,7 +264,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
   background: var(--green-mist); color: var(--green-night);
   font-weight: 600; font-size: 15px; line-height: 1.5;
 }
-.values { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 24px; font: 700 20px/1.4 var(--serif); color: var(--green-deep); }
+.values { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 24px; font: 700 17px/1.5 var(--serif); color: var(--green-deep); }
 .values li + li::before { content: "·"; color: var(--red); margin-inline-end: 18px; }
 
 /* presence map (69 wilayas): the wilayas where we are active pulse, with a ring at their capital */
@@ -338,7 +328,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 }
 .goal-icon svg { width: 26px; height: 26px; }
 .goal-head { display: flex; align-items: baseline; gap: 12px; }
-.goal h3 { font: 700 21px/1.45 var(--serif); }
+.goal h3 { font: 700 18px/1.55 var(--serif); }
 .goal-no { margin-inline-start: auto; font: 600 13px/1 var(--sans); color: var(--red); letter-spacing: .06em; }
 .goal p { font-size: 15.5px; line-height: 1.95; color: var(--muted); }
 
@@ -392,12 +382,12 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 .vmv-card.values  { background: linear-gradient(155deg, #E30613 0%, #A80410 100%); }
 .vmv-card .ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: rgba(255, 255, 255, .16); margin-bottom: 16px; }
 .vmv-card .ic svg { width: 24px; height: 24px; }
-.vmv-card h3 { font: 700 25px/1.3 var(--serif); margin-bottom: 10px; }
+.vmv-card h3 { font: 800 21px/1.45 var(--serif); margin-bottom: 10px; }
 .vmv-card p { font-size: 16.5px; line-height: 1.9; color: rgba(255, 255, 255, .94); }
 .vmv-card ul { display: flex; flex-wrap: wrap; gap: 8px; }
 .vmv-card li { padding: 6px 13px; border-radius: 999px; background: rgba(255, 255, 255, .17); font-weight: 600; font-size: 15px; }
 .pledges { margin-top: clamp(30px, 4vw, 48px); display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 20px 48px; align-items: start; }
-.pledges h3 { font: 700 26px/1.3 var(--serif); }
+.pledges h3 { font: 800 22px/1.45 var(--serif); }
 .pledges .hint { font-size: 14.5px; color: var(--muted); margin-top: 6px; }
 .pledges ul { columns: 2; column-gap: 36px; }
 .pledges li { break-inside: avoid; position: relative; padding-inline-start: 20px; margin-bottom: 10px; font-size: 15.5px; line-height: 1.8; color: var(--muted); }
@@ -415,7 +405,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 .week .ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--green-mist); color: var(--green-deep); }
 .week .ic svg { width: 24px; height: 24px; }
 .week small { display: block; font: 600 12.5px/1 var(--sans); color: var(--red); margin-bottom: 6px; letter-spacing: .02em; }
-.week h3 { font: 700 19px/1.45 var(--serif); }
+.week h3 { font: 700 16.5px/1.6 var(--serif); }
 
 /* volunteer categories inside the band */
 .band .cats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
@@ -423,7 +413,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 
 /* donate */
 .donate { margin-top: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
-.donate-intro h3 { font: 700 clamp(24px, 2.6vw, 32px)/1.3 var(--serif); margin: 12px 0 10px; }
+.donate-intro h3 { font: 800 clamp(21px, 2.2vw, 27px)/1.45 var(--serif); margin: 12px 0 10px; }
 .donate-intro p { font-size: 15.5px; line-height: 1.85; color: var(--muted); }
 .acct {
   display: grid; gap: 10px; align-content: start;
@@ -472,7 +462,7 @@ section[id], #volunteer, #donate { scroll-margin-top: 84px; }
 .foot { display: grid; grid-template-columns: auto 1fr auto; gap: 16px 32px; align-items: center; }
 .foot-brand { display: flex; align-items: center; gap: 10px; color: var(--ink); }
 .foot-brand img { width: 34px; height: 34px; }
-.foot-brand strong { display: block; font: 700 18px/1.2 var(--serif); }
+.foot-brand strong { display: block; font: 800 16px/1.3 var(--serif); }
 .foot-brand span { font: 600 9px/1 var(--sans); letter-spacing: .22em; color: var(--red); }
 .privacy { text-align: center; line-height: 1.7; }
 .foot-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
@@ -537,7 +527,7 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
 @media (max-width: 760px) {
   .bar { flex-wrap: wrap; gap: 0 12px; min-height: 0; padding-top: 10px; }
   .brand img { width: 34px; height: 34px; }
-  .brand-name { font-size: 20px; }
+  .brand-name { font-size: 18px; }
   .nav { order: 3; width: 100%; overflow-x: auto; scrollbar-width: none; padding-block: 6px 8px; margin-inline: -6px; }
   .nav::-webkit-scrollbar { display: none; }
   .nav a { flex: none; font-size: 14px; padding: 6px 6px; }
@@ -553,7 +543,7 @@ html.paused *, html.paused *::before, html.paused *::after { animation-play-stat
   .fact b { font-size: 22px; }
   .fact span { font-size: 12px; }
   .week { padding: 16px 14px 18px; gap: 10px; }
-  .week h3 { font-size: 17px; }
+  .week h3 { font-size: 15.5px; }
   .motes span:nth-child(n+9) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
