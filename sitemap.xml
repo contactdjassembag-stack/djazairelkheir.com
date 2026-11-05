@@ -2,16 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://djazairelkheir.com/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://djazairelkheir.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://djazairelkheir.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djazairelkheir.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ber" href="https://djazairelkheir.com/ber/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://djazairelkheir.com/"/>
   </url>
   <url>
     <loc>https://djazairelkheir.com/fr/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://djazairelkheir.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://djazairelkheir.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djazairelkheir.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ber" href="https://djazairelkheir.com/ber/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djazairelkheir.com/"/>
+  </url>
+  <url>
+    <loc>https://djazairelkheir.com/en/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://djazairelkheir.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djazairelkheir.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djazairelkheir.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ber" href="https://djazairelkheir.com/ber/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djazairelkheir.com/"/>
+  </url>
+  <url>
+    <loc>https://djazairelkheir.com/ber/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://djazairelkheir.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djazairelkheir.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djazairelkheir.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ber" href="https://djazairelkheir.com/ber/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://djazairelkheir.com/"/>
   </url>
 </urlset>
